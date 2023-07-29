@@ -1,0 +1,2438 @@
+kconfig/conf.c:136:14: style: The scope of the variable 'def' can be reduced. [variableScope]
+ const char *def;
+             ^
+kconfig/confdata.c:206:12: warning: The address of local variable 'line' might be accessed at non-zero index. [objectIndex]
+ (*lineptr)[slen] = c;
+           ^
+kconfig/confdata.c:221:20: note: Address of variable taken here.
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+kconfig/confdata.c:221:20: note: Calling function 'add_byte', 2nd argument '&line' value is lifetime=line
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+kconfig/confdata.c:206:12: note: The address of local variable 'line' might be accessed at non-zero index.
+ (*lineptr)[slen] = c;
+           ^
+kconfig/confdata.c:206:12: warning: The address of local variable 'line' might be accessed at non-zero index. [objectIndex]
+ (*lineptr)[slen] = c;
+           ^
+kconfig/confdata.c:233:20: note: Address of variable taken here.
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+kconfig/confdata.c:233:20: note: Calling function 'add_byte', 2nd argument '&line' value is lifetime=line
+   if (add_byte(c, &line, slen, n) < 0)
+                   ^
+kconfig/confdata.c:206:12: note: The address of local variable 'line' might be accessed at non-zero index.
+ (*lineptr)[slen] = c;
+           ^
+kconfig/confdata.c:80:17: style: The scope of the variable 'sym' can be reduced. [variableScope]
+ struct symbol *sym;
+                ^
+kconfig/confdata.c:107:14: style: The scope of the variable 'fullname' can be reduced. [variableScope]
+ static char fullname[PATH_MAX+1];
+             ^
+kconfig/confdata.c:508:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+ size_t l;
+        ^
+kconfig/confdata.c:580:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+ size_t l;
+        ^
+kconfig/confdata.c:662:38: style:inconclusive: Function 'conf_write_defconfig' argument 1 names different: declaration 'name' definition 'filename'. [funcArgNamesDifferent]
+int conf_write_defconfig(const char *filename)
+                                     ^
+kconfig/lkc_proto.h:7:1: note: Function 'conf_write_defconfig' argument 1 names different: declaration 'name' definition 'filename'.
+P(conf_write_defconfig,int,(const char *name));
+^
+kconfig/confdata.c:662:38: note: Function 'conf_write_defconfig' argument 1 names different: declaration 'name' definition 'filename'.
+int conf_write_defconfig(const char *filename)
+                                     ^
+kconfig/confdata.c:86:6: style: Variable 'dst' is assigned a value that is never used. [unreadVariable]
+ dst = name;
+     ^
+kconfig/confdata.c:62:1: error: va_list 'ap' was opened but not closed by va_end(). [va_end_missing]
+}
+^
+kconfig/expr.c:233:15: style: The scope of the variable 'tmp' can be reduced. [variableScope]
+ struct expr *tmp;
+              ^
+kconfig/gconf.c:1352:9: style: Variable 'valid' is reassigned a value before the old one has been used. [redundantAssignment]
+  valid = gtk_tree_model_iter_next(model2, child2);
+        ^
+kconfig/gconf.c:1333:12: note: valid is assigned
+     valid = TRUE;
+           ^
+kconfig/gconf.c:1352:9: note: valid is overwritten
+  valid = gtk_tree_model_iter_next(model2, child2);
+        ^
+kconfig/gconf.c:1244:15: style: The scope of the variable 'ret' can be reduced. [variableScope]
+ GtkTreeIter *ret;
+              ^
+kconfig/gconf.c:1188:11: style: Local variable 'color' shadows outer variable [shadowVariable]
+ GdkColor color;
+          ^
+kconfig/gconf.c:55:10: note: Shadowed declaration
+GdkColor color;
+         ^
+kconfig/gconf.c:1188:11: note: Shadow variable
+ GdkColor color;
+          ^
+kconfig/gconf.c:170:9: style: Variable 'widget' is assigned a value that is never used. [unreadVariable]
+ widget = glade_xml_get_widget(xml, "toolbar1");
+        ^
+kconfig/lxdialog/textbox.c:88:14: style: Condition 'height>4' is always true [knownConditionTrueFalse]
+  if (height > 4)
+             ^
+kconfig/lxdialog/textbox.c:83:13: note: Assuming that condition 'height<8' is not redundant
+ if (height < TEXTBOX_HEIGTH_MIN || width < TEXTBOX_WIDTH_MIN)
+            ^
+kconfig/lxdialog/textbox.c:88:14: note: Condition 'height>4' is always true
+  if (height > 4)
+             ^
+kconfig/lxdialog/textbox.c:95:13: style: Condition 'width>5' is always true [knownConditionTrueFalse]
+  if (width > 5)
+            ^
+kconfig/lxdialog/textbox.c:83:43: note: Assuming that condition 'width<8' is not redundant
+ if (height < TEXTBOX_HEIGTH_MIN || width < TEXTBOX_WIDTH_MIN)
+                                          ^
+kconfig/lxdialog/textbox.c:95:13: note: Condition 'width>5' is always true
+  if (width > 5)
+            ^
+kconfig/lxdialog/util.c:384:6: style: The scope of the variable 'newl' can be reduced. [variableScope]
+ int newl, cur_x, cur_y;
+     ^
+kconfig/lxdialog/util.c:384:12: style: The scope of the variable 'cur_x' can be reduced. [variableScope]
+ int newl, cur_x, cur_y;
+           ^
+kconfig/lxdialog/util.c:384:19: style: The scope of the variable 'cur_y' can be reduced. [variableScope]
+ int newl, cur_x, cur_y;
+                  ^
+kconfig/lxdialog/util.c:385:18: style: The scope of the variable 'room' can be reduced. [variableScope]
+ int prompt_len, room, wlen;
+                 ^
+kconfig/lxdialog/util.c:385:24: style: The scope of the variable 'wlen' can be reduced. [variableScope]
+ int prompt_len, room, wlen;
+                       ^
+kconfig/lxdialog/util.c:386:30: style: The scope of the variable 'word' can be reduced. [variableScope]
+ char tempstr[MAX_LEN + 1], *word, *sp, *sp2, *newline_separator = 0;
+                             ^
+kconfig/lxdialog/util.c:386:42: style: The scope of the variable 'sp2' can be reduced. [variableScope]
+ char tempstr[MAX_LEN + 1], *word, *sp, *sp2, *newline_separator = 0;
+                                         ^
+kconfig/lxdialog/util.c:386:48: style: The scope of the variable 'newline_separator' can be reduced. [variableScope]
+ char tempstr[MAX_LEN + 1], *word, *sp, *sp2, *newline_separator = 0;
+                                               ^
+kconfig/lxdialog/util.c:513:6: style: The scope of the variable 'i' can be reduced. [variableScope]
+ int i;
+     ^
+kconfig/lxdialog/util.c:534:23: style: The scope of the variable 'c' can be reduced. [variableScope]
+ int i, in_paren = 0, c;
+                      ^
+kconfig/lxdialog/util.c:641:26: style:inconclusive: Function 'item_set_data' argument 1 names different: declaration 'p' definition 'ptr'. [funcArgNamesDifferent]
+void item_set_data(void *ptr)
+                         ^
+kconfig/lxdialog/dialog.h:164:26: note: Function 'item_set_data' argument 1 names different: declaration 'p' definition 'ptr'.
+void item_set_data(void *p);
+                         ^
+kconfig/lxdialog/util.c:641:26: note: Function 'item_set_data' argument 1 names different: declaration 'p' definition 'ptr'.
+void item_set_data(void *ptr)
+                         ^
+kconfig/mconf.c:650:6: style: The scope of the variable 'res' can be reduced. [variableScope]
+ int res;
+     ^
+kconfig/mconf.c:428:14: style: Variable 'stpart.text' is assigned a value that is never used. [unreadVariable]
+ stpart.text = str_get(&sttext);
+             ^
+kconfig/menu.c:498:8: style: Condition 'sym' is always true [knownConditionTrueFalse]
+   if (sym)
+       ^
+kconfig/menu.c:493:6: note: Assuming that condition '!sym' is not redundant
+ if (!sym || sym_get_tristate_value(menu->sym) == no)
+     ^
+kconfig/menu.c:498:8: note: Condition 'sym' is always true
+   if (sym)
+       ^
+kconfig/menu.c:610:2: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+kconfig/menu.c:624:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+kconfig/menu.c:640:25: note: Calling function 'get_symbol_prop', 1st argument 'sym' value is 0
+ prop = get_symbol_prop(sym);
+                        ^
+kconfig/menu.c:610:2: note: Null pointer dereference
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+kconfig/menu.c:637:2: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ for_all_prompts(sym, prop)
+ ^
+kconfig/menu.c:624:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+kconfig/menu.c:637:2: note: Null pointer dereference
+ for_all_prompts(sym, prop)
+ ^
+kconfig/menu.c:652:2: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ for_all_properties(sym, prop, P_SELECT) {
+ ^
+kconfig/menu.c:624:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+kconfig/menu.c:652:2: note: Null pointer dereference
+ for_all_properties(sym, prop, P_SELECT) {
+ ^
+kconfig/menu.c:662:6: warning: Either the condition 'sym' is redundant or there is possible null pointer dereference: sym. [nullPointerRedundantCheck]
+ if (sym->rev_dep.expr) {
+     ^
+kconfig/menu.c:624:6: note: Assuming that condition 'sym' is not redundant
+ if (sym && sym->name) {
+     ^
+kconfig/menu.c:662:6: note: Null pointer dereference
+ if (sym->rev_dep.expr) {
+     ^
+kconfig/menu.c:549:9: style: The scope of the variable 'j' can be reduced. [variableScope]
+ int i, j;
+        ^
+kconfig/menu.c:183:39: style:inconclusive: Function 'menu_add_visibility' argument 1 names different: declaration 'dep' definition 'expr'. [funcArgNamesDifferent]
+void menu_add_visibility(struct expr *expr)
+                                      ^
+kconfig/lkc.h:115:39: note: Function 'menu_add_visibility' argument 1 names different: declaration 'dep' definition 'expr'.
+void menu_add_visibility(struct expr *dep);
+                                      ^
+kconfig/menu.c:183:39: note: Function 'menu_add_visibility' argument 1 names different: declaration 'dep' definition 'expr'.
+void menu_add_visibility(struct expr *expr)
+                                      ^
+kconfig/nconf.c:1235:21: style: Variable 'child' is assigned a value that is never used. [unreadVariable]
+ struct menu *child = 0;
+                    ^
+kconfig/nconf.c:1239:13: style: Variable 'i' is assigned a value that is never used. [unreadVariable]
+ int res, i = 0;
+            ^
+kconfig/nconf.gui.c:169:4: style: Variable 'x' is reassigned a value before the old one has been used. [redundantAssignment]
+ x = startx + (int)temp;
+   ^
+kconfig/nconf.gui.c:161:5: note: x is assigned
+  x = startx;
+    ^
+kconfig/nconf.gui.c:169:4: note: x is overwritten
+ x = startx + (int)temp;
+   ^
+kconfig/nconf.gui.c:562:14: style: Redundant initialization for 'total_lines'. The initialized value is overwritten before it is read. [redundantInitialization]
+ total_lines = get_line_no(text);
+             ^
+kconfig/nconf.gui.c:547:18: note: total_lines is initialized
+ int total_lines = get_line_no(text);
+                 ^
+kconfig/nconf.gui.c:562:14: note: total_lines is overwritten
+ total_lines = get_line_no(text);
+             ^
+kconfig/nconf.gui.c:244:8: style: The scope of the variable 'btn' can be reduced. [variableScope]
+ char *btn;
+       ^
+kconfig/qconf.h:54:2: style: Class 'ConfigList' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigList(ConfigView* p, const char *name = 0);
+ ^
+kconfig/qconf.h:207:2: style: Class 'ConfigLineEdit' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigLineEdit(ConfigView* parent);
+ ^
+kconfig/qconf.h:223:2: style: Class 'ConfigView' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigView(QWidget* parent, const char *name = 0);
+ ^
+kconfig/qconf.h:256:2: style: Class 'ConfigInfoView' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigInfoView(QWidget* parent, const char *name = 0);
+ ^
+kconfig/qconf.h:286:2: style: Class 'ConfigSearchWindow' has a constructor with 1 argument that is not explicit. [noExplicitConstructor]
+ ConfigSearchWindow(ConfigMainWindow* parent, const char *name = 0);
+ ^
+kconfig/qconf.h:58:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigView*)Parent::parent();
+         ^
+kconfig/qconf.h:98:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigItem *)Parent::firstChild();
+         ^
+kconfig/qconf.h:169:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigList*)Parent::listView();
+         ^
+kconfig/qconf.h:173:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigItem *)Parent::firstChild();
+         ^
+kconfig/qconf.h:177:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigItem *)Parent::nextSibling();
+         ^
+kconfig/qconf.h:210:10: style: C-style pointer casting [cstyleCast]
+  return (ConfigView*)Parent::parent();
+         ^
+kconfig/qconf.cc:247:12: style: C-style pointer casting [cstyleCast]
+  for (i = (ConfigItem*)menu->data; i; i = i->nextItem)
+           ^
+kconfig/qconf.cc:273:14: style: C-style pointer casting [cstyleCast]
+  nextItem = (ConfigItem*)menu->data;
+             ^
+kconfig/qconf.cc:419:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)menu->data;
+                    ^
+kconfig/qconf.cc:434:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)selectedItem();
+                    ^
+kconfig/qconf.cc:458:11: style: C-style pointer casting [cstyleCast]
+   item = (ConfigItem*)it.current();
+          ^
+kconfig/qconf.cc:584:17: style: C-style pointer casting [cstyleCast]
+ for (; (item = (ConfigItem*)it.current()); it++) {
+                ^
+kconfig/qconf.cc:680:9: style: C-style pointer casting [cstyleCast]
+ item = (ConfigItem*)i;
+        ^
+kconfig/qconf.cc:727:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)itemAt(p);
+                    ^
+kconfig/qconf.cc:789:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem*)itemAt(p);
+                    ^
+kconfig/qconf.cc:819:21: style: C-style pointer casting [cstyleCast]
+ ConfigItem* item = (ConfigItem *)currentItem();
+                    ^
+kconfig/qconf.cc:1585:9: style: C-style pointer casting [cstyleCast]
+ item = (ConfigItem*)menuList->selectedItem();
+        ^
+kconfig/qconf.cc:1591:10: style: C-style pointer casting [cstyleCast]
+  item = (ConfigItem*)item->parent();
+         ^
+kconfig/qconf.cc:455:15: style: The scope of the variable 'item' can be reduced. [variableScope]
+  ConfigItem* item;
+              ^
+kconfig/qconf.cc:663:43: style:inconclusive: Function 'keyPressEvent' argument 1 names different: declaration 'e' definition 'ev'. [funcArgNamesDifferent]
+void ConfigList::keyPressEvent(QKeyEvent* ev)
+                                          ^
+kconfig/qconf.h:63:32: note: Function 'keyPressEvent' argument 1 names different: declaration 'e' definition 'ev'.
+ void keyPressEvent(QKeyEvent *e);
+                               ^
+kconfig/qconf.cc:663:43: note: Function 'keyPressEvent' argument 1 names different: declaration 'e' definition 'ev'.
+void ConfigList::keyPressEvent(QKeyEvent* ev)
+                                          ^
+kconfig/qconf.cc:988:43: style:inconclusive: Function 'setInfo' argument 1 names different: declaration 'menu' definition 'm'. [funcArgNamesDifferent]
+void ConfigInfoView::setInfo(struct menu *m)
+                                          ^
+kconfig/qconf.h:260:28: note: Function 'setInfo' argument 1 names different: declaration 'menu' definition 'm'.
+ void setInfo(struct menu *menu);
+                           ^
+kconfig/qconf.cc:988:43: note: Function 'setInfo' argument 1 names different: declaration 'menu' definition 'm'.
+void ConfigInfoView::setInfo(struct menu *m)
+                                          ^
+kconfig/qconf.cc:455:15: style: Local variable 'item' shadows outer argument [shadowArgument]
+  ConfigItem* item;
+              ^
+kconfig/qconf.cc:447:41: note: Shadowed declaration
+void ConfigList::updateList(ConfigItem* item)
+                                        ^
+kconfig/qconf.cc:455:15: note: Shadow variable
+  ConfigItem* item;
+              ^
+kconfig/symbol.c:904:4: error: Common realloc mistake: 'res' nulled but not freed upon failure [memleakOnRealloc]
+   res = realloc(res, reslen);
+   ^
+kconfig/symbol.c:1209:14: style: Variable 'stack.expr' is reassigned a value before the old one has been used. [redundantAssignment]
+  stack.expr = NULL;
+             ^
+kconfig/symbol.c:1205:14: note: stack.expr is assigned
+  stack.expr = prop->expr;
+             ^
+kconfig/symbol.c:1209:14: note: stack.expr is overwritten
+  stack.expr = NULL;
+             ^
+kconfig/symbol.c:696:17: style: The scope of the variable 'ds' can be reduced. [variableScope]
+ struct symbol *ds;
+                ^
+kconfig/symbol.c:1084:23: style: The scope of the variable 'next_sym' can be reduced. [variableScope]
+ struct symbol *sym, *next_sym;
+                      ^
+kconfig/symbol.c:1258:19: style: The scope of the variable 'prop' can be reduced. [variableScope]
+ struct property *prop;
+                  ^
+kconfig/symbol.c:1292:20: style: The scope of the variable 'propp' can be reduced. [variableScope]
+ struct property **propp;
+                   ^
+kconfig/symbol.c:474:61: style:inconclusive: Function 'sym_tristate_within_range' argument 2 names different: declaration 'tri' definition 'val'. [funcArgNamesDifferent]
+bool sym_tristate_within_range(struct symbol *sym, tristate val)
+                                                            ^
+kconfig/lkc_proto.h:42:1: note: Function 'sym_tristate_within_range' argument 2 names different: declaration 'tri' definition 'val'.
+P(sym_tristate_within_range,bool,(struct symbol *sym,tristate tri));
+^
+kconfig/symbol.c:474:61: note: Function 'sym_tristate_within_range' argument 2 names different: declaration 'tri' definition 'val'.
+bool sym_tristate_within_range(struct symbol *sym, tristate val)
+                                                            ^
+kconfig/symbol.c:493:58: style:inconclusive: Function 'sym_set_tristate_value' argument 2 names different: declaration 'tri' definition 'val'. [funcArgNamesDifferent]
+bool sym_set_tristate_value(struct symbol *sym, tristate val)
+                                                         ^
+kconfig/lkc_proto.h:43:1: note: Function 'sym_set_tristate_value' argument 2 names different: declaration 'tri' definition 'val'.
+P(sym_set_tristate_value,bool,(struct symbol *sym,tristate tri));
+^
+kconfig/symbol.c:493:58: note: Function 'sym_set_tristate_value' argument 2 names different: declaration 'tri' definition 'val'.
+bool sym_set_tristate_value(struct symbol *sym, tristate val)
+                                                         ^
+kconfig/symbol.c:552:55: style:inconclusive: Function 'sym_string_valid' argument 2 names different: declaration 'newval' definition 'str'. [funcArgNamesDifferent]
+bool sym_string_valid(struct symbol *sym, const char *str)
+                                                      ^
+kconfig/lkc_proto.h:45:1: note: Function 'sym_string_valid' argument 2 names different: declaration 'newval' definition 'str'.
+P(sym_string_valid,bool,(struct symbol *sym, const char *newval));
+^
+kconfig/symbol.c:552:55: note: Function 'sym_string_valid' argument 2 names different: declaration 'newval' definition 'str'.
+bool sym_string_valid(struct symbol *sym, const char *str)
+                                                      ^
+kconfig/symbol.c:369:18: style: Local variable 'e' shadows outer variable [shadowVariable]
+    struct expr *e;
+                 ^
+kconfig/symbol.c:297:15: note: Shadowed declaration
+ struct expr *e;
+              ^
+kconfig/symbol.c:369:18: note: Shadow variable
+    struct expr *e;
+                 ^
+kconfig/util.c:37:23: style: The scope of the variable 'env_sym' can be reduced. [variableScope]
+ struct symbol *sym, *env_sym;
+                      ^
+kconfig/util.c:113:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+ size_t l;
+        ^
+kernel/bflt.c:42:11: error: The address of local variable 'le' is accessed at non-zero index. [objectIndex]
+    b1 = b[1];
+          ^
+kernel/bflt.c:38:29: note: Address of variable taken here.
+    uint8_t *b = (uint8_t *)&le;
+                            ^
+kernel/bflt.c:42:11: note: The address of local variable 'le' is accessed at non-zero index.
+    b1 = b[1];
+          ^
+kernel/bflt.c:43:11: error: The address of local variable 'le' is accessed at non-zero index. [objectIndex]
+    b2 = b[2];
+          ^
+kernel/bflt.c:38:29: note: Address of variable taken here.
+    uint8_t *b = (uint8_t *)&le;
+                            ^
+kernel/bflt.c:43:11: note: The address of local variable 'le' is accessed at non-zero index.
+    b2 = b[2];
+          ^
+kernel/bflt.c:44:11: error: The address of local variable 'le' is accessed at non-zero index. [objectIndex]
+    be = b[3] + (b2 << 8) + (b1 << 16) + (b0 << 24);
+          ^
+kernel/bflt.c:38:29: note: Address of variable taken here.
+    uint8_t *b = (uint8_t *)&le;
+                            ^
+kernel/bflt.c:44:11: note: The address of local variable 'le' is accessed at non-zero index.
+    be = b[3] + (b2 << 8) + (b1 << 16) + (b0 << 24);
+          ^
+kernel/bflt.c:272:19: style: Local variable 'mem' shadows outer variable [shadowVariable]
+        uint8_t  *mem, *copy_src;
+                  ^
+kernel/bflt.c:218:12: note: Shadowed declaration
+    void * mem = NULL;
+           ^
+kernel/bflt.c:272:19: note: Shadow variable
+        uint8_t  *mem, *copy_src;
+                  ^
+kernel/bflt.c:54:17: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+        kprintf("bFLT: Magic number does not match\r\n");
+                ^
+kernel/bflt.c:58:17: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+        kprintf("bFLT: Version number does not match\r\n");
+                ^
+kernel/bflt.c:64:17: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+        kprintf("bFLT: Unsupported flags detected - GZip'd data is not supported\r\n");
+                ^
+kernel/bflt.c:76:17: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+        kprintf("bFLT: No shared library support\r\n");
+                ^
+kernel/bflt.c:185:21: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+            kprintf("bFLT: Unable to calculate relocation address\r\n");
+                    ^
+kernel/bflt.c:232:17: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+        kprintf("bFLT: Bad FLT header\r\n");
+                ^
+kernel/bflt.c:267:17: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+        kprintf("bFLT: GZIP compression not supported\r\n");
+                ^
+kernel/bflt.c:286:21: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+            kprintf("bFLT: Could not allocate enough memory for process\r\n");
+                    ^
+kernel/bflt.c:311:17: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+        kprintf("bFLT: Only GOTPIC bFLT binaries are supported\r\n");
+                ^
+kernel/bflt.c:350:13: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+    kprintf("bFLT: Caught error - exiting\r\n");
+            ^
+kernel/bflt.c:301:36: portability: '*reloc_text' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+        *entry_point = *reloc_text + entry_point_offset;
+                                   ^
+kernel/bflt.c:177:29: style: Variable 'relocd_addr' is assigned a value that is never used. [unreadVariable]
+                relocd_addr = (unsigned long *)RELOC_FAILED;
+                            ^
+kernel/bflt.c:145:23: style: Unused variable: addr [unusedVariable]
+        unsigned long addr, *fixup_addr;
+                      ^
+kernel/cirbuf.c:121:13: style: Unused variable: byte [unusedVariable]
+    uint8_t byte;
+            ^
+kernel/crypto/aes.c:809:13: style: Condition 'keylen>max_key_len' is always false [knownConditionTrueFalse]
+ if (keylen > max_key_len) {
+            ^
+kernel/crypto/aes.c:806:15: note: Assuming that condition 'keylen==32' is not redundant
+ if (!(keylen == 32))
+              ^
+kernel/crypto/aes.c:809:13: note: Condition 'keylen>max_key_len' is always false
+ if (keylen > max_key_len) {
+            ^
+kernel/drivers/devusb_cdc_ecm.c:407:16: style: The scope of the variable 'fail_count' can be reduced. [variableScope]
+    static int fail_count = 0;
+               ^
+kernel/drivers/devusb_cdc_ecm.c:422:31: warning:inconclusive: Found suspicious equality comparison. Did you intend to assign a value instead? [constStatement]
+            tx_buffer->status == TX_STATUS_FREE;
+                              ^
+kernel/drivers/devusb_cdc_ecm.c:406:36: style: Variable 'usbeth' is assigned a value that is never used. [unreadVariable]
+    struct pico_dev_usbeth *usbeth = (struct pico_dev_usbeth *) dev;
+                                   ^
+kernel/drivers/devusb_cdc_ecm.c:458:14: style: The scope of the variable 'usb_buf' can be reduced. [variableScope]
+    uint8_t *usb_buf;
+             ^
+kernel/drivers/devusb_cdc_ecm.c:458:14: style: Variable 'usb_buf' is not assigned a value. [unassignedVariable]
+    uint8_t *usb_buf;
+             ^
+kernel/drivers/exti.c:220:26: style:inconclusive: Function 'exti_unregister' argument 1 names different: declaration 'pin' definition 'idx'. [funcArgNamesDifferent]
+void exti_unregister(int idx)
+                         ^
+kernel/drivers/exti.h:7:26: note: Function 'exti_unregister' argument 1 names different: declaration 'pin' definition 'idx'.
+void exti_unregister(int pin);
+                         ^
+kernel/drivers/exti.c:220:26: note: Function 'exti_unregister' argument 1 names different: declaration 'pin' definition 'idx'.
+void exti_unregister(int idx)
+                         ^
+kernel/drivers/exti.c:243:14: style: Unused variable: exti_irq [unusedVariable]
+    uint32_t exti_irq;
+             ^
+kernel/drivers/fbcon.c:70:20: style: The statement 'if (fbcon->sid!=pid) fbcon->sid=pid' is logically equivalent to 'fbcon->sid=pid'. [duplicateConditionalAssign]
+    if (fbcon->sid != pid) {
+                   ^
+kernel/drivers/fbcon.c:72:20: note: Assignment 'fbcon->sid=pid'
+        fbcon->sid = pid;
+                   ^
+kernel/drivers/fbcon.c:70:20: note: Condition 'fbcon->sid!=pid' is redundant
+    if (fbcon->sid != pid) {
+                   ^
+kernel/drivers/fbcon.c:79:19: style: The scope of the variable 'fc' can be reduced. [variableScope]
+    unsigned char fc;
+                  ^
+kernel/drivers/fbcon.c:80:26: style: The scope of the variable 'fcl' can be reduced. [variableScope]
+    const unsigned char *fcl;
+                         ^
+kernel/drivers/fbcon.c:81:13: style: The scope of the variable 'fc_color' can be reduced. [variableScope]
+    uint8_t fc_color = COLOR_DEFAULT;
+            ^
+kernel/drivers/fbcon.c:81:22: style: Variable 'fc_color' is assigned a value that is never used. [unreadVariable]
+    uint8_t fc_color = COLOR_DEFAULT;
+                     ^
+kernel/drivers/fortuna.c:155:10: style: The scope of the variable 'encrypt_iv' can be reduced. [variableScope]
+ uint8_t encrypt_iv[FORTUNA_ENCRYPT_IV_SIZE] = { 0 }; /* Can't use ECB mode and combine it with our external counter, so doing it this way */
+         ^
+kernel/drivers/fortuna.c:219:6: style: The scope of the variable 'remaining_bytes' can be reduced. [variableScope]
+ int remaining_bytes = 0;
+     ^
+kernel/drivers/fortuna.c:220:11: style: The scope of the variable 'block_buffer' can be reduced. [variableScope]
+ uint8_t *block_buffer = 0;
+          ^
+kernel/drivers/fortuna.c:221:11: style: The scope of the variable 'seed_buffer' can be reduced. [variableScope]
+ uint8_t *seed_buffer = 0;
+          ^
+kernel/drivers/fortuna.c:223:6: style: The scope of the variable 'seed_size' can be reduced. [variableScope]
+ int seed_size = 0;
+     ^
+kernel/drivers/fortuna.c:210:14: style: Modulo of one is always equal to zero [moduloofone]
+ pool = pool % FORTUNA_POOL_COUNT;
+             ^
+kernel/drivers/fortuna.c:219:22: style: Variable 'remaining_bytes' is assigned a value that is never used. [unreadVariable]
+ int remaining_bytes = 0;
+                     ^
+kernel/drivers/fortuna.c:220:24: style: Variable 'block_buffer' is assigned a value that is never used. [unreadVariable]
+ uint8_t *block_buffer = 0;
+                       ^
+kernel/drivers/fortuna.c:221:23: style: Variable 'seed_buffer' is assigned a value that is never used. [unreadVariable]
+ uint8_t *seed_buffer = 0;
+                      ^
+kernel/drivers/fortuna.c:223:16: style: Variable 'seed_size' is assigned a value that is never used. [unreadVariable]
+ int seed_size = 0;
+               ^
+kernel/drivers/frand.c:61:21: style: Local variable 'frand' shadows outer variable [shadowVariable]
+ struct frand_info *frand;
+                    ^
+kernel/drivers/frand.c:37:27: note: Shadowed declaration
+static struct frand_info *frand[MAX_FRANDS] = { 0 };
+                          ^
+kernel/drivers/frand.c:61:21: note: Shadow variable
+ struct frand_info *frand;
+                    ^
+kernel/drivers/ft5336.c:93:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/drivers/gpio.c:556:13: warning: Redundant assignment of 'g->base' to itself. [selfAssignment]
+    g->base = g->base;
+            ^
+kernel/drivers/gpio.c:557:12: warning: Redundant assignment of 'g->pin' to itself. [selfAssignment]
+    g->pin = g->pin;
+           ^
+kernel/drivers/gpio.c:526:17: style: The scope of the variable 'val' can be reduced. [variableScope]
+        uint8_t val;
+                ^
+kernel/drivers/gpio.c:373:24: style: Unused variable: gpiomx [unusedVariable]
+    struct dev_gpiomx *gpiomx;
+                       ^
+kernel/drivers/gpio.c:475:15: style: Variable 'ptr' is assigned a value that is never used. [unreadVariable]
+    char *ptr = (char *)buf;
+              ^
+kernel/drivers/gpio.c:473:9: style: Unused variable: out [unusedVariable]
+    int out;
+        ^
+kernel/drivers/gpio.c:628:0: information: Skipping configuration 'GPIO_MODE_AF' since the value of 'GPIO_MODE_AF' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+        case GPIO_MODE_AF:
+^
+kernel/drivers/gpio.c:629:0: information: Skipping configuration 'GPIO_MODE_AF' since the value of 'GPIO_MODE_AF' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+            SET_AF(gpio_config->base, GPIO_MODE_AF, gpio_config->af,  gpio_config->pin, gpio_config->optype, gpio_config->speed);
+^
+kernel/drivers/ili9341.c:480:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i, now;
+        ^
+kernel/drivers/ili9341.c:46:13: style: struct member 'ili0341_ctrl_reg::reg' is never used. [unusedStructMember]
+    uint8_t reg;
+            ^
+kernel/drivers/ili9341.c:47:13: style: struct member 'ili0341_ctrl_reg::data' is never used. [unusedStructMember]
+    uint8_t data;
+            ^
+kernel/drivers/ili9341.c:491:13: style: Variable 'now' is assigned a value that is never used. [unreadVariable]
+        now = jiffies;
+            ^
+kernel/drivers/ili9341.c:510:13: style: Variable 'now' is assigned a value that is never used. [unreadVariable]
+        now = jiffies;
+            ^
+kernel/drivers/ili9341.c:518:13: style: Variable 'now' is assigned a value that is never used. [unreadVariable]
+        now = jiffies;
+            ^
+kernel/drivers/l3gd20.c:104:20: style: The scope of the variable 'ioctl_obuffer' can be reduced. [variableScope]
+    static uint8_t ioctl_obuffer[2];
+                   ^
+kernel/drivers/l3gd20.c:151:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/l3gd20.c:145:27: style: Unused variable: spi [unusedVariable]
+    const struct dev_spi *spi;
+                          ^
+kernel/drivers/lis3dsh.c:123:12: style: Variable 'reg_value' is reassigned a value before the old one has been used. [redundantAssignment]
+ reg_value = spi_xfer(SPI1, 0xFF);
+           ^
+kernel/drivers/lis3dsh.c:122:12: note: reg_value is assigned
+ reg_value = spi_xfer(SPI1, SET_READ_SINGLE_CMD(reg));
+           ^
+kernel/drivers/lis3dsh.c:123:12: note: reg_value is overwritten
+ reg_value = spi_xfer(SPI1, 0xFF);
+           ^
+kernel/drivers/lis3dsh.c:85:13: style: struct member 'lis3dsh_ctrl_reg::reg' is never used. [unusedStructMember]
+    uint8_t reg;
+            ^
+kernel/drivers/lis3dsh.c:86:13: style: struct member 'lis3dsh_ctrl_reg::data' is never used. [unusedStructMember]
+    uint8_t data;
+            ^
+kernel/drivers/lis3dsh.c:159:18: style: Unused variable: int_reg_value [unusedVariable]
+    volatile int int_reg_value;
+                 ^
+kernel/drivers/lsm303dlhc.c:49:21: style: struct member 'ins_data_xyz::x' is never used. [unusedStructMember]
+            int16_t x;
+                    ^
+kernel/drivers/lsm303dlhc.c:50:21: style: struct member 'ins_data_xyz::y' is never used. [unusedStructMember]
+            int16_t y;
+                    ^
+kernel/drivers/lsm303dlhc.c:51:21: style: struct member 'ins_data_xyz::z' is never used. [unusedStructMember]
+            int16_t z;
+                    ^
+kernel/drivers/mccog21.c:75:13: style: Local variable 'cmd' shadows outer variable [shadowVariable]
+    uint8_t cmd = MCC0G21_CLEAR_DISPLAY;
+            ^
+kernel/drivers/mccog21.c:115:16: note: Shadowed declaration
+static uint8_t cmd;
+               ^
+kernel/drivers/mccog21.c:75:13: note: Shadow variable
+    uint8_t cmd = MCC0G21_CLEAR_DISPLAY;
+            ^
+kernel/drivers/mccog21.c:189:15: style: Variable 'r' is assigned a value that is never used. [unreadVariable]
+            r = i2c_kthread_write(&Disp.i2c, MCC0G21_COMMAND_PREFIX, &cmd, 1);
+              ^
+kernel/drivers/mccog21.c:207:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/drivers/null.c:32:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/null.c:43:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/pty.c:260:18: style: The statement 'if (pty->sid!=pid) pty->sid=pid' is logically equivalent to 'pty->sid=pid'. [duplicateConditionalAssign]
+    if (pty->sid != pid) {
+                 ^
+kernel/drivers/pty.c:261:18: note: Assignment 'pty->sid=pid'
+        pty->sid = pid;
+                 ^
+kernel/drivers/pty.c:260:18: note: Condition 'pty->sid!=pid' is redundant
+    if (pty->sid != pid) {
+                 ^
+kernel/drivers/pty.c:396:18: style: The statement 'if (pts->sid!=pid) pts->sid=pid' is logically equivalent to 'pts->sid=pid'. [duplicateConditionalAssign]
+    if (pts->sid != pid) {
+                 ^
+kernel/drivers/pty.c:397:18: note: Assignment 'pts->sid=pid'
+        pts->sid = pid;
+                 ^
+kernel/drivers/pty.c:396:18: note: Condition 'pts->sid!=pid' is redundant
+    if (pts->sid != pid) {
+                 ^
+kernel/drivers/pty.c:177:9: style: Condition 'pts' is always false [knownConditionTrueFalse]
+    if (pts) {
+        ^
+kernel/drivers/pty.c:170:26: note: Assignment 'pts=NULL', assigned value is 0
+    struct devpts *pts = NULL;
+                         ^
+kernel/drivers/pty.c:172:13: note: Assuming condition is false
+    if (len == 0)
+            ^
+kernel/drivers/pty.c:177:9: note: Condition 'pts' is always false
+    if (pts) {
+        ^
+kernel/drivers/pty.c:230:9: style: Condition 'pty' is always true [knownConditionTrueFalse]
+    if (pty)
+        ^
+kernel/drivers/pty.c:228:9: note: Assuming that condition '!pty' is not redundant
+    if (!pty)
+        ^
+kernel/drivers/pty.c:230:9: note: Condition 'pty' is always true
+    if (pty)
+        ^
+kernel/drivers/pty.c:182:17: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+            ret = cirbuf_readbytes(pts->miso, buf, len);
+                ^
+kernel/drivers/pty.c:180:17: note: ret is assigned
+            ret = -EPIPE;
+                ^
+kernel/drivers/pty.c:182:17: note: ret is overwritten
+            ret = cirbuf_readbytes(pts->miso, buf, len);
+                ^
+kernel/drivers/pty.c:208:17: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+            ret = cirbuf_writebytes(pts->mosi, buf, len);
+                ^
+kernel/drivers/pty.c:206:17: note: ret is assigned
+            ret = -EPIPE;
+                ^
+kernel/drivers/pty.c:208:17: note: ret is overwritten
+            ret = cirbuf_writebytes(pts->mosi, buf, len);
+                ^
+kernel/drivers/pty.c:161:19: style: Unused variable: master [unusedVariable]
+    struct fnode *master, *slave;
+                  ^
+kernel/drivers/pty.c:161:28: style: Unused variable: slave [unusedVariable]
+    struct fnode *master, *slave;
+                           ^
+kernel/drivers/pty.c:258:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+kernel/drivers/pty.c:269:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+kernel/drivers/pty.c:294:19: style: Unused variable: master [unusedVariable]
+    struct fnode *master, *slave;
+                  ^
+kernel/drivers/pty.c:294:28: style: Unused variable: slave [unusedVariable]
+    struct fnode *master, *slave;
+                           ^
+kernel/drivers/pty.c:394:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = 0;
+            ^
+kernel/drivers/socket_in.c:61:20: style:inconclusive: Boolean expression '(0x010|0x008)!=0' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+    if ((*revents) & (POLLHUP | POLLERR) != 0) {
+                   ^
+kernel/drivers/socket_in.c:61:20: style: Boolean result is used in bitwise operation. Clarify expression with parentheses. [clarifyCondition]
+    if ((*revents) & (POLLHUP | POLLERR) != 0) {
+                   ^
+kernel/drivers/socket_in.c:164:16: style: The statement 'if (domain!=PICO_PROTO_IPV4) domain=PICO_PROTO_IPV4' is logically equivalent to 'domain=PICO_PROTO_IPV4'. [duplicateConditionalAssign]
+    if (domain != PICO_PROTO_IPV4)
+               ^
+kernel/drivers/socket_in.c:165:16: note: Assignment 'domain=PICO_PROTO_IPV4'
+        domain = PICO_PROTO_IPV4;
+               ^
+kernel/drivers/socket_in.c:164:16: note: Condition 'domain!=PICO_PROTO_IPV4' is redundant
+    if (domain != PICO_PROTO_IPV4)
+               ^
+kernel/drivers/socket_in.c:61:31: style: Expression '(X | 0x10) != 0x0' is always true. [comparisonError]
+    if ((*revents) & (POLLHUP | POLLERR) != 0) {
+                              ^
+kernel/drivers/socket_in.c:61:31: style: Expression '(X | 0x8) != 0x0' is always true. [comparisonError]
+    if ((*revents) & (POLLHUP | POLLERR) != 0) {
+                              ^
+kernel/drivers/socket_in.c:28:6: warning: Either the condition '!fno' is redundant or there is possible null pointer dereference: fno. [nullPointerRedundantCheck]
+    *fno = task_filedesc_get(fd);
+     ^
+kernel/drivers/socket_in.c:30:9: note: Assuming that condition '!fno' is not redundant
+    if (!fno)
+        ^
+kernel/drivers/socket_in.c:28:6: note: Null pointer dereference
+    *fno = task_filedesc_get(fd);
+     ^
+kernel/drivers/socket_in.c:186:5: warning: Either the condition 's' is redundant or there is possible null pointer dereference: s. [nullPointerRedundantCheck]
+    s->sock = pico_socket_open(domain, type, pico_socket_event);
+    ^
+kernel/drivers/socket_in.c:187:9: note: Assuming that condition 's' is not redundant
+    if (s)
+        ^
+kernel/drivers/socket_in.c:186:5: note: Null pointer dereference
+    s->sock = pico_socket_open(domain, type, pico_socket_event);
+    ^
+kernel/drivers/socket_in.c:190:10: warning: Either the condition 's' is redundant or there is possible null pointer dereference: s. [nullPointerRedundantCheck]
+    if (!s->sock) {
+         ^
+kernel/drivers/socket_in.c:187:9: note: Assuming that condition 's' is not redundant
+    if (s)
+        ^
+kernel/drivers/socket_in.c:190:10: note: Null pointer dereference
+    if (!s->sock) {
+         ^
+kernel/drivers/socket_in.c:463:17: style: Variable 'ret' is reassigned a value before the old one has been used. [redundantAssignment]
+            ret = SYS_CALL_AGAIN;
+                ^
+kernel/drivers/socket_in.c:459:13: note: ret is assigned
+        ret = pico_socket_connect(s->sock, &paddr, port);
+            ^
+kernel/drivers/socket_in.c:463:17: note: ret is overwritten
+            ret = SYS_CALL_AGAIN;
+                ^
+kernel/drivers/socket_in.c:635:7: style: The scope of the variable 'flags' can be reduced. [variableScope]
+  int flags = 1;
+      ^
+kernel/drivers/socket_in.c:661:7: style: The scope of the variable 'flags' can be reduced. [variableScope]
+  int flags = 1;
+      ^
+kernel/drivers/socket_in.c:813:29: style: The scope of the variable 'r' can be reduced. [variableScope]
+    struct pico_ipv4_route *r;
+                            ^
+kernel/drivers/socket_in.c:815:10: style: The scope of the variable 'dest' can be reduced. [variableScope]
+    char dest[16];
+         ^
+kernel/drivers/socket_in.c:816:10: style: The scope of the variable 'mask' can be reduced. [variableScope]
+    char mask[16];
+         ^
+kernel/drivers/socket_in.c:817:10: style: The scope of the variable 'gw' can be reduced. [variableScope]
+    char gw[16];
+         ^
+kernel/drivers/socket_in.c:818:10: style: The scope of the variable 'metric' can be reduced. [variableScope]
+    char metric[5];
+         ^
+kernel/drivers/socket_in.c:225:53: portability: 'buf' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            ret = pico_socket_recvfrom(s->sock, buf + s->bytes, len - s->bytes, &paddr, &port);
+                                                    ^
+kernel/drivers/socket_in.c:231:49: portability: 'buf' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            ret = pico_socket_read(s->sock, buf + s->bytes, len - s->bytes);
+                                                ^
+kernel/drivers/socket_in.c:296:51: portability: 'buf' is of type 'const void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            ret = pico_socket_sendto(s->sock, buf + s->bytes, len - s->bytes, &paddr, port);
+                                                  ^
+kernel/drivers/socket_in.c:303:50: portability: 'buf' is of type 'const void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            ret = pico_socket_write(s->sock, buf + s->bytes, len - s->bytes);
+                                                 ^
+kernel/drivers/socket_in.c:635:13: style: Variable 'flags' is assigned a value that is never used. [unreadVariable]
+  int flags = 1;
+            ^
+kernel/drivers/socket_in.c:648:13: style: Variable 'flags' is assigned a value that is never used. [unreadVariable]
+      flags +=2;
+            ^
+kernel/drivers/socket_in.c:661:13: style: Variable 'flags' is assigned a value that is never used. [unreadVariable]
+  int flags = 1;
+            ^
+kernel/drivers/socket_in.c:669:13: style: Variable 'flags' is assigned a value that is never used. [unreadVariable]
+      flags +=2;
+            ^
+kernel/drivers/socket_in.c:660:22: style: Unused variable: g [unusedVariable]
+  struct pico_ip4 a, g, n;
+                     ^
+kernel/drivers/socket_in.c:688:33: style: Unused variable: s [unusedVariable]
+    struct frosted_inet_socket *s;
+                                ^
+kernel/drivers/socket_un.c:11:6: warning: Either the condition '!fno' is redundant or there is possible null pointer dereference: fno. [nullPointerRedundantCheck]
+    *fno = task_filedesc_get(fd);
+     ^
+kernel/drivers/socket_un.c:13:9: note: Assuming that condition '!fno' is not redundant
+    if (!fno)
+        ^
+kernel/drivers/socket_un.c:11:6: note: Null pointer dereference
+    *fno = task_filedesc_get(fd);
+     ^
+kernel/drivers/stm32_i2c.c:144:11: style:inconclusive: Boolean expression '(I2C_SR1_TIMEOUT)==(I2C_SR1_TIMEOUT)' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+    if(er & (I2C_SR1_TIMEOUT) == (I2C_SR1_TIMEOUT))
+          ^
+kernel/drivers/stm32_i2c.c:144:7: style: Suspicious condition (bitwise operator + comparison); Clarify expression with parentheses. [clarifyCondition]
+    if(er & (I2C_SR1_TIMEOUT) == (I2C_SR1_TIMEOUT))
+      ^
+kernel/drivers/stm32_i2c.c:144:11: style: Boolean result is used in bitwise operation. Clarify expression with parentheses. [clarifyCondition]
+    if(er & (I2C_SR1_TIMEOUT) == (I2C_SR1_TIMEOUT))
+          ^
+kernel/drivers/stm32_i2c.c:378:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/stm32_i2c.c:406:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/stm32_i2c.c:433:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/stm32_i2c.c:459:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/stm32_i2c.c:492:41: style:inconclusive: Function 'i2c_create' argument 1 names different: declaration 'i2c_config' definition 'conf'. [funcArgNamesDifferent]
+int i2c_create(const struct i2c_config *conf)
+                                        ^
+kernel/drivers/i2c.h:33:41: note: Function 'i2c_create' argument 1 names different: declaration 'i2c_config' definition 'conf'.
+int i2c_create(const struct i2c_config *i2c_config);
+                                        ^
+kernel/drivers/stm32_i2c.c:492:41: note: Function 'i2c_create' argument 1 names different: declaration 'i2c_config' definition 'conf'.
+int i2c_create(const struct i2c_config *conf)
+                                        ^
+kernel/drivers/stm32_i2c.c:219:23: style: Unused variable: cr1 [unusedVariable]
+    volatile uint16_t cr1;
+                      ^
+kernel/drivers/stm32_i2c.c:220:23: style: Unused variable: cr2 [unusedVariable]
+    volatile uint16_t cr2;
+                      ^
+kernel/drivers/stm32_i2c.c:488:13: style: Variable 'name[3]' is assigned a value that is never used. [unreadVariable]
+    name[3] = '0' + conf->idx;
+            ^
+kernel/drivers/stm32_rng.c:108:22: style: Variable 'rng' is assigned a value that is never used. [unreadVariable]
+ struct dev_rng *rng = &DEV_RNG[0];
+                     ^
+kernel/drivers/stm32_rng.c:99:20: portability: 'buf' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+        memcpy(buf + i, &tmp, len - i);
+                   ^
+kernel/drivers/stm32_sdio.c:278:24: style:inconclusive: Boolean expression 'cmd!=12' is used in bitwise operation. Did you mean '&&'? [bitwiseOnBoolean]
+    while ((cmd != 12) &  (SDIO_STA(sd->base) & (SDIO_STA_RXACT | SDIO_STA_TXACT)));;
+                       ^
+kernel/drivers/stm32_sdio.c:363:17: style: The scope of the variable 'tmp_reg' can be reduced. [variableScope]
+    uint32_t    tmp_reg;
+                ^
+kernel/drivers/stm32_sdio.c:364:9: style: The scope of the variable 'ndx' can be reduced. [variableScope]
+    int ndx;
+        ^
+kernel/drivers/stm32_sdio.c:430:14: style: The scope of the variable 'tmp_reg' can be reduced. [variableScope]
+    uint32_t tmp_reg;
+             ^
+kernel/drivers/stm32_sdio.c:433:9: style: The scope of the variable 'ndx' can be reduced. [variableScope]
+    int ndx, bdx = 0;
+        ^
+kernel/drivers/stm32_sdio.c:433:14: style: The scope of the variable 'bdx' can be reduced. [variableScope]
+    int ndx, bdx = 0;
+             ^
+kernel/drivers/stm32_sdio.c:502:14: style: The scope of the variable 'tmp_reg' can be reduced. [variableScope]
+    uint32_t tmp_reg;
+             ^
+kernel/drivers/stm32_sdio.c:673:21: style: Variable 'err' is assigned a value that is never used. [unreadVariable]
+                err = SDIO_EBADCARD;
+                    ^
+kernel/drivers/stm32_sdio.c:781:23: style: Variable 'dev' is assigned a value that is never used. [unreadVariable]
+    struct fnode *dev = arg;
+                      ^
+kernel/drivers/stm32_sdio.c:831:14: portability: Assigning a pointer to an integer is not portable. [AssignmentAddressToInteger]
+    sd->base = conf->base;
+             ^
+kernel/drivers/stm32_sdio.c:813:15: style: Unused variable: card [unusedVariable]
+    SDIO_CARD card;
+              ^
+kernel/drivers/stm32_spi.c:92:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/stm32_spi.c:88:35: style:inconclusive: Function 'devspi_xfer' argument 1 names different: declaration 'spi' definition 'sl'. [funcArgNamesDifferent]
+int devspi_xfer(struct spi_slave *sl, const char *obuf, char *ibuf, unsigned int len)
+                                  ^
+kernel/drivers/spi.h:39:35: note: Function 'devspi_xfer' argument 1 names different: declaration 'spi' definition 'sl'.
+int devspi_xfer(struct spi_slave *spi, const char *obuf, char *ibuf, unsigned int len);
+                                  ^
+kernel/drivers/stm32_spi.c:88:35: note: Function 'devspi_xfer' argument 1 names different: declaration 'spi' definition 'sl'.
+int devspi_xfer(struct spi_slave *sl, const char *obuf, char *ibuf, unsigned int len)
+                                  ^
+kernel/drivers/stm32_spi.c:121:44: style:inconclusive: Function 'devspi_create' argument 1 names different: declaration 'spi_config' definition 'conf'. [funcArgNamesDifferent]
+int devspi_create(const struct spi_config *conf)
+                                           ^
+kernel/drivers/spi.h:38:44: note: Function 'devspi_create' argument 1 names different: declaration 'spi_config' definition 'conf'.
+int devspi_create(const struct spi_config *spi_config);
+                                           ^
+kernel/drivers/stm32_spi.c:121:44: note: Function 'devspi_create' argument 1 names different: declaration 'spi_config' definition 'conf'.
+int devspi_create(const struct spi_config *conf)
+                                           ^
+kernel/drivers/stm32_usb.c:91:32: style:inconclusive: Function 'usbdev_start' argument 1 names different: declaration '_usbd_dev' definition 'usbd_dev'. [funcArgNamesDifferent]
+int usbdev_start(usbd_device **usbd_dev, unsigned int dev,
+                               ^
+kernel/drivers/usb.h:62:36: note: Function 'usbdev_start' argument 1 names different: declaration '_usbd_dev' definition 'usbd_dev'.
+    int usbdev_start(usbd_device **_usbd_dev, unsigned int dev,
+                                   ^
+kernel/drivers/stm32_usb.c:91:32: note: Function 'usbdev_start' argument 1 names different: declaration '_usbd_dev' definition 'usbd_dev'.
+int usbdev_start(usbd_device **usbd_dev, unsigned int dev,
+                               ^
+kernel/drivers/stm32_usb.c:245:15: style: Variable 'claim' is assigned a value that is never used. [unreadVariable]
+        claim = claim->next;
+              ^
+kernel/drivers/stm32f4_adc.c:79:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/stm32f4_adc.c:76:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/drivers/stm32f4_dsp.c:91:9: style: Unused variable: space [unusedVariable]
+    int space;
+        ^
+kernel/drivers/stm32f4_dsp.c:206:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/drivers/stm32f7_sdram.c:146:9: style: Variable 'now' is assigned a value that is never used. [unreadVariable]
+    now = jiffies;
+        ^
+kernel/drivers/tty_console.c:89:14: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int ret, i;
+             ^
+kernel/drivers/uart.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 14 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+kernel/drivers/uart.c:158:19: style: The statement 'if (uart->sid!=pid) uart->sid=pid' is logically equivalent to 'uart->sid=pid'. [duplicateConditionalAssign]
+    if (uart->sid != pid) {
+                  ^
+kernel/drivers/uart.c:160:19: note: Assignment 'uart->sid=pid'
+        uart->sid = pid;
+                  ^
+kernel/drivers/uart.c:158:19: note: Condition 'uart->sid!=pid' is redundant
+    if (uart->sid != pid) {
+                  ^
+kernel/drivers/uart.c:288:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/uart.c:339:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/uart.c:267:14: style: Variable 'ch' is assigned a value that is never used. [unreadVariable]
+    char *ch = (char *)buf;
+             ^
+kernel/drivers/uart.c:266:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/drivers/uart.c:424:43: style:inconclusive: Function 'uart_create' argument 1 names different: declaration 'cfg' definition 'uart'. [funcArgNamesDifferent]
+int uart_create(const struct uart_config *uart)
+                                          ^
+kernel/drivers/uart.h:28:43: note: Function 'uart_create' argument 1 names different: declaration 'cfg' definition 'uart'.
+int uart_create(const struct uart_config *cfg);
+                                          ^
+kernel/drivers/uart.c:424:43: note: Function 'uart_create' argument 1 names different: declaration 'cfg' definition 'uart'.
+int uart_create(const struct uart_config *uart)
+                                          ^
+kernel/drivers/usb/usb_kbd.c:126:10: style: The scope of the variable 'c' can be reduced. [variableScope]
+    char c;
+         ^
+kernel/drivers/usb/usb_kbd.c:135:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/drivers/usb/usb_kbd.c:380:16: style: Variable 'cbuf' is assigned a value that is never used. [unreadVariable]
+    char *cbuf = (char *)buf;
+               ^
+kernel/drivers/xadow_LED_5x7.c:76:9: style: The scope of the variable 'r' can be reduced. [variableScope]
+    int r;
+        ^
+kernel/drivers/xadow_LED_5x7.c:80:15: style: Variable 'r' is assigned a value that is never used. [unreadVariable]
+            r = i2c_kthread_write(&Matrix.i2c, DISP_STRING, Matrix.buf, Matrix.update);
+              ^
+kernel/drivers/xadow_LED_5x7.c:117:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/fpb.c:66:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+kernel/fpb.c:58:13: warning: Redundant code: Found a statement that begins with string constant. [constStatement]
+    kprintf("TRAP!\r\n");
+            ^
+kernel/fpb.c:61:17: error: Signed integer overflow for expression '0xA0<<24'. [integerOverflow]
+    DBG_DHCSR = DBG_DHCSR_KEY;
+                ^
+kernel/fpb.c:82:79: error: Signed integer overflow for expression '2<<30'. [integerOverflow]
+        FPB_COMP[n] = FPB_COMP_ENABLE | (((uint32_t)bpoint) & (0x1FFFFFFC)) | FPB_REPLACE_HI;
+                                                                              ^
+kernel/fpb.c:57:9: style: Unused variable: pid [unusedVariable]
+    int pid;
+        ^
+kernel/framebuffer.c:65:21: style: Local variable 'fb' shadows outer variable [shadowVariable]
+    struct fb_info *fb;
+                    ^
+kernel/framebuffer.c:35:24: note: Shadowed declaration
+static struct fb_info *fb[MAX_FBS] = { 0 };
+                       ^
+kernel/framebuffer.c:65:21: note: Shadow variable
+    struct fb_info *fb;
+                    ^
+kernel/framebuffer.c:97:21: style: Local variable 'fb' shadows outer variable [shadowVariable]
+    struct fb_info *fb;
+                    ^
+kernel/framebuffer.c:35:24: note: Shadowed declaration
+static struct fb_info *fb[MAX_FBS] = { 0 };
+                       ^
+kernel/framebuffer.c:97:21: note: Shadow variable
+    struct fb_info *fb;
+                    ^
+kernel/framebuffer.c:128:21: style: Local variable 'fb' shadows outer variable [shadowVariable]
+    struct fb_info *fb;
+                    ^
+kernel/framebuffer.c:35:24: note: Shadowed declaration
+static struct fb_info *fb[MAX_FBS] = { 0 };
+                       ^
+kernel/framebuffer.c:128:21: note: Shadow variable
+    struct fb_info *fb;
+                    ^
+kernel/framebuffer.c:171:22: style: Local variable 'fb' shadows outer variable [shadowVariable]
+    struct fb_info * fb = (struct fb_info *)FNO_MOD_PRIV(fno, &mod_devfb);
+                     ^
+kernel/framebuffer.c:35:24: note: Shadowed declaration
+static struct fb_info *fb[MAX_FBS] = { 0 };
+                       ^
+kernel/framebuffer.c:171:22: note: Shadow variable
+    struct fb_info * fb = (struct fb_info *)FNO_MOD_PRIV(fno, &mod_devfb);
+                     ^
+kernel/framebuffer.c:128:21: style: Unused variable: fb [unusedVariable]
+    struct fb_info *fb;
+                    ^
+kernel/framebuffer.c:183:39: style: Variable 'fbi' is assigned a value that is never used. [unreadVariable]
+        struct fb_fix_screeninfo *fbi = (struct fb_fix_screeninfo *)arg;
+                                      ^
+kernel/frosted.c:270:13: warning: Either the condition '!fno' is redundant or there is possible null pointer dereference: fno. [nullPointerRedundantCheck]
+        if (fno->owner && fno->owner->ops.exe) {
+            ^
+kernel/frosted.c:265:13: note: Assuming that condition '!fno' is not redundant
+        if (!fno) {
+            ^
+kernel/frosted.c:270:13: note: Null pointer dereference
+        if (fno->owner && fno->owner->ops.exe) {
+            ^
+kernel/frosted.c:156:15: style: The scope of the variable 'top_stack' can be reduced. [variableScope]
+    uint32_t *top_stack;
+              ^
+kernel/fs/fatfs.c:470:13: warning:inconclusive: The buffer 'fullpath' may not be null-terminated after the call to strncpy(). [terminateStrncpy]
+            strncpy(fullpath, fpath, PATHN_MAX);
+            ^
+kernel/fs/fatfs.c:410:9: style: Condition 'path' is always true [knownConditionTrueFalse]
+    if (path && strlen(path) > 0) {
+        ^
+kernel/fs/fatfs.c:399:15: note: Assuming that condition '!path' is not redundant
+    if (!f || !path)
+              ^
+kernel/fs/fatfs.c:410:9: note: Condition 'path' is always true
+    if (path && strlen(path) > 0) {
+        ^
+kernel/fs/fatfs.c:256:9: style: The scope of the variable 'fat' can be reduced. [variableScope]
+    int fat;
+        ^
+kernel/fs/fatfs.c:379:36: error: Expression '*(fs->win+dj->off+len)=name[len++]' depends on order of evaluation of side effects [unknownEvaluationOrder]
+        *(fs->win + dj->off + len) = name[len++];
+                                   ^
+kernel/fs/fatfs.c:620:26: style: Variable 'fat' is assigned a value that is never used. [unreadVariable]
+            uint32_t fat = get_fat(fsd, dj->sclust);
+                         ^
+kernel/fs/fatfs.c:709:13: style: Variable 'ret' is assigned a value that is never used. [unreadVariable]
+    int ret = add_dir(fs, &dj, path);
+            ^
+kernel/fs/memfs.c:37:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/fs/memfs.c:63:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/fs/sysfs.c:432:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+kernel/fs/sysfs.c:433:9: style: The scope of the variable 'stack_used' can be reduced. [variableScope]
+    int stack_used;
+        ^
+kernel/fs/sysfs.c:434:11: style: The scope of the variable 'name' can be reduced. [variableScope]
+    char *name;
+          ^
+kernel/fs/sysfs.c:435:9: style: The scope of the variable 'p_state' can be reduced. [variableScope]
+    int p_state;
+        ^
+kernel/fs/sysfs.c:436:9: style: The scope of the variable 'nice' can be reduced. [variableScope]
+    int nice;
+        ^
+kernel/fs/sysfs.c:649:9: style: The scope of the variable 'l' can be reduced. [variableScope]
+    int l = 0;
+        ^
+kernel/fs/sysfs.c:53:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/fs/sysfs.c:70:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/fs/sysfs.c:533:13: style: Local variable 'i' shadows outer variable [shadowVariable]
+        int i;
+            ^
+kernel/fs/sysfs.c:517:9: note: Shadowed declaration
+    int i;
+        ^
+kernel/fs/sysfs.c:533:13: note: Shadow variable
+        int i;
+            ^
+kernel/fs/sysfs.c:517:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/fs/sysfs.c:518:9: style: Unused variable: stack_used [unusedVariable]
+    int stack_used;
+        ^
+kernel/fs/sysfs.c:519:9: style: Unused variable: p_state [unusedVariable]
+    int p_state;
+        ^
+kernel/fs/sysfs.c:601:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/fs/sysfs.c:602:9: style: Unused variable: stack_used [unusedVariable]
+    int stack_used;
+        ^
+kernel/fs/sysfs.c:603:9: style: Unused variable: p_state [unusedVariable]
+    int p_state;
+        ^
+kernel/fs/sysfs.c:649:11: style: Variable 'l' is assigned a value that is never used. [unreadVariable]
+    int l = 0;
+          ^
+kernel/fs/sysfs.c:645:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/fs/sysfs.c:646:9: style: Unused variable: stack_used [unusedVariable]
+    int stack_used;
+        ^
+kernel/fs/sysfs.c:647:9: style: Unused variable: p_state [unusedVariable]
+    int p_state;
+        ^
+kernel/fs/sysfs.c:273:14: style: The scope of the variable 'pin_n' can be reduced. [variableScope]
+    uint32_t pin_n = 0;
+             ^
+kernel/fs/sysfs.c:273:20: style: Variable 'pin_n' is assigned a value that is never used. [unreadVariable]
+    uint32_t pin_n = 0;
+                   ^
+kernel/fs/sysfs.c:266:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/fs/sysfs.c:267:9: style: Unused variable: stack_used [unusedVariable]
+    int stack_used;
+        ^
+kernel/fs/sysfs.c:268:11: style: Unused variable: name [unusedVariable]
+    char *name;
+          ^
+kernel/fs/sysfs.c:269:9: style: Unused variable: p_state [unusedVariable]
+    int p_state;
+        ^
+kernel/fs/sysfs.c:270:9: style: Unused variable: nice [unusedVariable]
+    int nice;
+        ^
+kernel/fs/xipfs.c:163:30: style: The scope of the variable 'f' can be reduced. [variableScope]
+    const struct xipfs_fhdr *f;
+                             ^
+kernel/fs/xipfs.c:45:13: style: Checking if unsigned expression 'len' is less than zero. [unsignedLessThanZero]
+    if (len <= 0)
+            ^
+kernel/getaddrinfo.c:181:25: style: Unused variable: sa6 [unusedVariable]
+    struct sockaddr_in6 sa6;
+                        ^
+kernel/kprintf.c:153:9: style: The scope of the variable 't' can be reduced. [variableScope]
+    int t, neg = 0, pc = 0;
+        ^
+kernel/kprintf.c:263:13: style: The scope of the variable 'args' can be reduced. [variableScope]
+    va_list args;
+            ^
+kernel/kprintf.c:264:9: style: The scope of the variable 'ret' can be reduced. [variableScope]
+    int ret;
+        ^
+kernel/kprintf.c:171:15: warning: Either the condition 'u' is redundant or there is division by zero at line 171. [zerodivcond]
+        t = u % b;
+              ^
+kernel/kprintf.c:170:12: note: Assuming that condition 'u' is not redundant
+    while (u) {
+           ^
+kernel/kprintf.c:175:14: note: Assignment to 'u/=b'
+        u /= b;
+             ^
+kernel/kprintf.c:171:15: note: Division by zero
+        t = u % b;
+              ^
+kernel/kprintf.c:280:39: error: va_list 'args' was opened but not closed by va_end(). [va_end_missing]
+    return print( &out, format, args );
+                                      ^
+kernel/locks.c:93:41: style:inconclusive: Function 'sem_wait' argument 2 names different: declaration 't' definition 'timeout'. [funcArgNamesDifferent]
+int sem_wait(sem_t *s, struct timespec *timeout)
+                                        ^
+kernel/frosted.h:145:41: note: Function 'sem_wait' argument 2 names different: declaration 't' definition 'timeout'.
+int sem_wait(sem_t *s, struct timespec *t);
+                                        ^
+kernel/locks.c:93:41: note: Function 'sem_wait' argument 2 names different: declaration 't' definition 'timeout'.
+int sem_wait(sem_t *s, struct timespec *timeout)
+                                        ^
+kernel/locks.c:143:24: style:inconclusive: Function 'sem_destroy' argument 1 names different: declaration 's' definition 'sem'. [funcArgNamesDifferent]
+int sem_destroy(sem_t *sem)
+                       ^
+kernel/frosted.h:149:24: note: Function 'sem_destroy' argument 1 names different: declaration 's' definition 'sem'.
+int sem_destroy(sem_t *s);
+                       ^
+kernel/locks.c:143:24: note: Function 'sem_destroy' argument 1 names different: declaration 's' definition 'sem'.
+int sem_destroy(sem_t *sem)
+                       ^
+kernel/malloc.c:556:52: warning: Either the condition '!ptr' is redundant or there is overflow in pointer subtraction. [nullPointerArithmeticRedundantCheck]
+    blk = (struct f_malloc_block *)((uint8_t *)ptr - sizeof(struct f_malloc_block));
+                                                   ^
+kernel/malloc.c:558:9: note: Assuming that condition '!ptr' is not redundant
+    if (!ptr) {
+        ^
+kernel/malloc.c:556:52: note: Null pointer subtraction
+    blk = (struct f_malloc_block *)((uint8_t *)ptr - sizeof(struct f_malloc_block));
+                                                   ^
+kernel/malloc.c:614:31: style:inconclusive: Function 'fmalloc_owner' argument 1 names different: declaration 'ptr' definition '_ptr'. [funcArgNamesDifferent]
+int fmalloc_owner(const void *_ptr)
+                              ^
+kernel/frosted.h:346:31: note: Function 'fmalloc_owner' argument 1 names different: declaration 'ptr' definition '_ptr'.
+int fmalloc_owner(const void *ptr);
+                              ^
+kernel/malloc.c:614:31: note: Function 'fmalloc_owner' argument 1 names different: declaration 'ptr' definition '_ptr'.
+int fmalloc_owner(const void *_ptr)
+                              ^
+kernel/malloc.c:374:33: style: Local variable 'blk' shadows outer variable [shadowVariable]
+        struct f_malloc_block * blk;
+                                ^
+kernel/malloc.c:332:29: note: Shadowed declaration
+    struct f_malloc_block * blk = NULL;
+                            ^
+kernel/malloc.c:374:33: note: Shadow variable
+        struct f_malloc_block * blk;
+                                ^
+kernel/malloc.c:145:20: style: Variable 'baddr' is assigned a value that is never used. [unreadVariable]
+    uint32_t baddr = (uint32_t)blk;
+                   ^
+kernel/malloc.c:146:22: style: Variable 'reqsize' is assigned a value that is never used. [unreadVariable]
+    uint32_t reqsize = size + sizeof(struct f_malloc_block);
+                     ^
+kernel/malloc.c:215:35: style: Variable 'heap_stack_high' is assigned a value that is never used. [unreadVariable]
+    const char  * heap_stack_high = &_stack;
+                                  ^
+kernel/malloc.c:555:13: style: Variable 'pid' is assigned a value that is never used. [unreadVariable]
+    int pid = this_task_getpid();
+            ^
+kernel/malloc.c:196:0: information: Skipping configuration 'CONFIG_TCPIP_MEMPOOL' since the value of 'CONFIG_TCPIP_MEMPOOL' is unknown. Use -D if you want to check it. You can use -U to skip it explicitly. [ConfigurationNotChecked]
+    static char * heap_end_tcpip = (char *)CONFIG_TCPIP_MEMPOOL;
+^
+kernel/malloc.c:480:13: portability: %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+            dbg_malloc("Splitting blocks, since requested size [%d] << best fit block size [%d]!\n", size, blk->size);
+            ^
+kernel/malloc.c:480:13: portability: %d in format string (no. 2) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+            dbg_malloc("Splitting blocks, since requested size [%d] << best fit block size [%d]!\n", size, blk->size);
+            ^
+kernel/malloc.c:722:13: warning: %d in format string (no. 1) requires 'int' but the argument type is 'unsigned int'. [invalidPrintfArgType_sint]
+            dbg_malloc(">>> Entry #%d: \n", i);
+            ^
+kernel/malloc.c:727:13: portability: %d in format string (no. 1) requires 'int' but the argument type is 'size_t {aka unsigned long}'. [invalidPrintfArgType_sint]
+            dbg_malloc("    Size (usr) %d \n", blk->size);
+            ^
+kernel/malloc.c:699:32: style:inconclusive: Function 'task_segfault' argument 1 names different: declaration 'addr' definition 'mem'. [funcArgNamesDifferent]
+    int task_segfault(uint32_t mem, uint32_t inst, int flags) {
+                               ^
+kernel/frosted.h:125:28: note: Function 'task_segfault' argument 1 names different: declaration 'addr' definition 'mem'.
+int task_segfault(uint32_t addr, uint32_t instr, int flags);
+                           ^
+kernel/malloc.c:699:32: note: Function 'task_segfault' argument 1 names different: declaration 'addr' definition 'mem'.
+    int task_segfault(uint32_t mem, uint32_t inst, int flags) {
+                               ^
+kernel/malloc.c:699:46: style:inconclusive: Function 'task_segfault' argument 2 names different: declaration 'instr' definition 'inst'. [funcArgNamesDifferent]
+    int task_segfault(uint32_t mem, uint32_t inst, int flags) {
+                                             ^
+kernel/frosted.h:125:43: note: Function 'task_segfault' argument 2 names different: declaration 'instr' definition 'inst'.
+int task_segfault(uint32_t addr, uint32_t instr, int flags);
+                                          ^
+kernel/malloc.c:699:46: note: Function 'task_segfault' argument 2 names different: declaration 'instr' definition 'inst'.
+    int task_segfault(uint32_t mem, uint32_t inst, int flags) {
+                                             ^
+kernel/module.c:93:16: warning: Either the condition 'fno' is redundant or there is possible null pointer dereference: fno. [nullPointerRedundantCheck]
+    } else if (fno->owner && fno->owner->ops.recvfrom) {
+               ^
+kernel/module.c:91:9: note: Assuming that condition 'fno' is not redundant
+    if (fno && fno->owner->ops.read) {
+        ^
+kernel/module.c:93:16: note: Null pointer dereference
+    } else if (fno->owner && fno->owner->ops.recvfrom) {
+               ^
+kernel/mpu.c:182:32: portability: 'stack' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    mpu_setaddr(4, (int)(stack + 20));
+                               ^
+kernel/scheduler.c:1267:9: style: Assignment of function parameter has no effect outside the function. [uselessAssignmentArg]
+        nice = NICE_MAX;
+        ^
+kernel/scheduler.c:562:33: warning: Either the condition '!t' is redundant or there is possible null pointer dereference: t. [nullPointerRedundantCheck]
+    struct filedesc_table *ft = t->tb.filedesc_table;
+                                ^
+kernel/scheduler.c:563:9: note: Assuming that condition '!t' is not redundant
+    if (!t || !f)
+        ^
+kernel/scheduler.c:562:33: note: Null pointer dereference
+    struct filedesc_table *ft = t->tb.filedesc_table;
+                                ^
+kernel/scheduler.c:1348:20: error: Null pointer dereference: new->tb.filedesc_table [nullPointer]
+            new->tb.filedesc_table->fdesc[i].mask = ft->fdesc[i].mask;
+                   ^
+kernel/scheduler.c:1335:30: note: Assignment 'new->tb.filedesc_table=NULL', assigned value is 0
+    new->tb.filedesc_table = NULL;
+                             ^
+kernel/scheduler.c:1348:20: note: Null pointer dereference
+            new->tb.filedesc_table->fdesc[i].mask = ft->fdesc[i].mask;
+                   ^
+kernel/scheduler.c:1412:20: error: Null pointer dereference: new->tb.filedesc_table [nullPointer]
+            new->tb.filedesc_table->fdesc[i].mask = ft->fdesc[i].mask;
+                   ^
+kernel/scheduler.c:1399:30: note: Assignment 'new->tb.filedesc_table=NULL', assigned value is 0
+    new->tb.filedesc_table = NULL;
+                             ^
+kernel/scheduler.c:1412:20: note: Null pointer dereference
+            new->tb.filedesc_table->fdesc[i].mask = ft->fdesc[i].mask;
+                   ^
+kernel/scheduler.c:1321:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+kernel/scheduler.c:1377:9: style: The scope of the variable 'i' can be reduced. [variableScope]
+    int i;
+        ^
+kernel/scheduler.c:2460:14: style: Checking if unsigned expression 'arg1' is less than zero. [unsignedLessThanZero]
+    if (arg1 < 0)
+             ^
+kernel/scheduler.c:2495:14: style: Checking if unsigned expression 'arg1' is less than zero. [unsignedLessThanZero]
+    if (arg1 < 0)
+             ^
+kernel/scheduler.c:2510:14: style: Checking if unsigned expression 'arg1' is less than zero. [unsignedLessThanZero]
+    if (arg1 < 0)
+             ^
+kernel/scheduler.c:1318:64: style:inconclusive: Function 'task_create' argument 3 names different: declaration 'prio' definition 'nice'. [funcArgNamesDifferent]
+int task_create(struct vfs_info *vfsi, void *arg, unsigned int nice)
+                                                               ^
+kernel/frosted.h:91:64: note: Function 'task_create' argument 3 names different: declaration 'prio' definition 'nice'.
+int task_create(struct vfs_info *vfsi, void *arg, unsigned int prio);
+                                                               ^
+kernel/scheduler.c:1318:64: note: Function 'task_create' argument 3 names different: declaration 'prio' definition 'nice'.
+int task_create(struct vfs_info *vfsi, void *arg, unsigned int nice)
+                                                               ^
+kernel/scheduler.c:1361:37: style:inconclusive: Function 'scheduler_exec' argument 1 names different: declaration 'v' definition 'vfsi'. [funcArgNamesDifferent]
+int scheduler_exec(struct vfs_info *vfsi, void *args)
+                                    ^
+kernel/frosted.h:90:37: note: Function 'scheduler_exec' argument 1 names different: declaration 'v' definition 'vfsi'.
+int scheduler_exec(struct vfs_info *v, void *args);
+                                    ^
+kernel/scheduler.c:1361:37: note: Function 'scheduler_exec' argument 1 names different: declaration 'v' definition 'vfsi'.
+int scheduler_exec(struct vfs_info *vfsi, void *args)
+                                    ^
+kernel/scheduler.c:2957:28: style:inconclusive: Function 'task_segfault' argument 1 names different: declaration 'addr' definition 'address'. [funcArgNamesDifferent]
+int task_segfault(uint32_t address, uint32_t instruction, int flags)
+                           ^
+kernel/frosted.h:125:28: note: Function 'task_segfault' argument 1 names different: declaration 'addr' definition 'address'.
+int task_segfault(uint32_t addr, uint32_t instr, int flags);
+                           ^
+kernel/scheduler.c:2957:28: note: Function 'task_segfault' argument 1 names different: declaration 'addr' definition 'address'.
+int task_segfault(uint32_t address, uint32_t instruction, int flags)
+                           ^
+kernel/scheduler.c:2957:46: style:inconclusive: Function 'task_segfault' argument 2 names different: declaration 'instr' definition 'instruction'. [funcArgNamesDifferent]
+int task_segfault(uint32_t address, uint32_t instruction, int flags)
+                                             ^
+kernel/frosted.h:125:43: note: Function 'task_segfault' argument 2 names different: declaration 'instr' definition 'instruction'.
+int task_segfault(uint32_t addr, uint32_t instr, int flags);
+                                          ^
+kernel/scheduler.c:2957:46: note: Function 'task_segfault' argument 2 names different: declaration 'instr' definition 'instruction'.
+int task_segfault(uint32_t address, uint32_t instruction, int flags)
+                                             ^
+kernel/scheduler.c:443:16: style: Local variable 'arg' shadows outer argument [shadowArgument]
+        char **arg = (char **)(t->tb.arg);
+               ^
+kernel/scheduler.c:374:32: note: Shadowed declaration
+static void task_destroy(void *arg)
+                               ^
+kernel/scheduler.c:443:16: note: Shadow variable
+        char **arg = (char **)(t->tb.arg);
+               ^
+kernel/scheduler.c:2703:31: style: Local variable 'cur_extra' shadows outer variable [shadowVariable]
+    struct extra_stack_frame *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                              ^
+kernel/scheduler.c:49:36: note: Shadowed declaration
+volatile struct extra_stack_frame *cur_extra;
+                                   ^
+kernel/scheduler.c:2703:31: note: Shadow variable
+    struct extra_stack_frame *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                              ^
+kernel/scheduler.c:2704:30: style: Local variable 'cur_nvic' shadows outer variable [shadowVariable]
+    struct nvic_stack_frame *cur_nvic = t->tb.sp + EXTRA_FRAME_SIZE;
+                             ^
+kernel/scheduler.c:50:35: note: Shadowed declaration
+volatile struct nvic_stack_frame *cur_nvic;
+                                  ^
+kernel/scheduler.c:2704:30: note: Shadow variable
+    struct nvic_stack_frame *cur_nvic = t->tb.sp + EXTRA_FRAME_SIZE;
+                             ^
+kernel/scheduler.c:2734:15: style: Local variable 'cur_extra' shadows outer variable [shadowVariable]
+    uint32_t *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+              ^
+kernel/scheduler.c:49:36: note: Shadowed declaration
+volatile struct extra_stack_frame *cur_extra;
+                                   ^
+kernel/scheduler.c:2734:15: note: Shadow variable
+    uint32_t *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+              ^
+kernel/scheduler.c:2735:15: style: Local variable 'cur_nvic' shadows outer variable [shadowVariable]
+    uint32_t *cur_nvic = t->tb.sp + EXTRA_FRAME_SIZE;
+              ^
+kernel/scheduler.c:50:35: note: Shadowed declaration
+volatile struct nvic_stack_frame *cur_nvic;
+                                  ^
+kernel/scheduler.c:2735:15: note: Shadow variable
+    uint32_t *cur_nvic = t->tb.sp + EXTRA_FRAME_SIZE;
+              ^
+kernel/scheduler.c:1423:37: portability: '_cur_task->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    *((uint32_t *)(_cur_task->tb.sp + EXTRA_FRAME_SIZE)) = vpid;
+                                    ^
+kernel/scheduler.c:2703:52: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    struct extra_stack_frame *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                                                   ^
+kernel/scheduler.c:2703:70: portability: 't->tb.sp+(sizeof(struct nvic_stack_frame))' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    struct extra_stack_frame *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                                                                     ^
+kernel/scheduler.c:2704:50: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    struct nvic_stack_frame *cur_nvic = t->tb.sp + EXTRA_FRAME_SIZE;
+                                                 ^
+kernel/scheduler.c:2734:36: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    uint32_t *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                                   ^
+kernel/scheduler.c:2734:54: portability: 't->tb.sp+(sizeof(struct nvic_stack_frame))' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    uint32_t *cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                                                     ^
+kernel/scheduler.c:2735:35: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    uint32_t *cur_nvic = t->tb.sp + EXTRA_FRAME_SIZE;
+                                  ^
+kernel/scheduler.c:3034:60: portability: '_cur_task->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    n_stack = (struct nvic_stack_frame *)(_cur_task->tb.sp + NVIC_FRAME_SIZE);
+                                                           ^
+kernel/scheduler.c:3047:44: portability: '_cur_task->tb.osp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+            (uint32_t *)(_cur_task->tb.osp + EXTRA_FRAME_SIZE);
+                                           ^
+kernel/scheduler.c:379:26: style: Unused variable: grp [unusedVariable]
+    struct thread_group *grp;
+                         ^
+kernel/scheduler.c:691:19: style: Unused variable: fno [unusedVariable]
+    struct fnode *fno;
+                  ^
+kernel/scheduler.c:710:22: style: Unused variable: fdesc [unusedVariable]
+    struct filedesc *fdesc;
+                     ^
+kernel/scheduler.c:732:22: style: Unused variable: fdesc [unusedVariable]
+    struct filedesc *fdesc;
+                     ^
+kernel/scheduler.c:783:20: style: Variable 't' is assigned a value that is never used. [unreadVariable]
+    struct task *t = _cur_task;
+                   ^
+kernel/scheduler.c:1267:14: style: Variable 'nice' is assigned a value that is never used. [unreadVariable]
+        nice = NICE_MAX;
+             ^
+kernel/scheduler.c:2115:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/scheduler.c:2385:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/scheduler.c:2459:22: style: Variable 'timeout' is assigned a value that is never used. [unreadVariable]
+    uint32_t timeout = jiffies + arg1;
+                     ^
+kernel/scheduler.c:74:13: style: The scope of the variable 'val' can be reduced. [variableScope]
+    uint8_t val;
+            ^
+kernel/scheduler.c:1535:18: style: The scope of the variable 't_joiner' can be reduced. [variableScope]
+    struct task *t_joiner;
+                 ^
+kernel/scheduler.c:1780:18: style: The scope of the variable 't_joiner' can be reduced. [variableScope]
+    struct task *t_joiner;
+                 ^
+kernel/scheduler.c:1823:18: style: The scope of the variable 't_joiner' can be reduced. [variableScope]
+    struct task *t_joiner;
+                 ^
+kernel/scheduler.c:1629:21: style: Checking if unsigned expression 'new->tb.tid' is less than zero. [unsignedLessThanZero]
+    if (new->tb.tid < 0) {
+                    ^
+kernel/scheduler.c:1691:21: style: Checking if unsigned expression 'new->tb.tid' is less than zero. [unsignedLessThanZero]
+    if (new->tb.tid < 0) {
+                    ^
+kernel/scheduler.c:406:20: style: Local variable 'arg' shadows outer argument [shadowArgument]
+            char **arg = (char **)(t->tb.arg);
+                   ^
+kernel/scheduler.c:374:32: note: Shadowed declaration
+static void task_destroy(void *arg)
+                               ^
+kernel/scheduler.c:406:20: note: Shadow variable
+            char **arg = (char **)(t->tb.arg);
+                   ^
+kernel/scheduler.c:1617:31: style: Variable 'ft' is assigned a value that is never used. [unreadVariable]
+    struct filedesc_table *ft = _cur_task->tb.filedesc_table;
+                              ^
+kernel/scheduler.c:1616:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/scheduler.c:1667:13: style: Variable 'sig' is assigned a value that is never used. [unreadVariable]
+    int sig = (int)arg2;
+            ^
+kernel/scheduler.c:964:26: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                         ^
+kernel/scheduler.c:964:44: portability: 't->tb.sp+(sizeof(struct nvic_stack_frame))' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    cur_extra = t->tb.sp + NVIC_FRAME_SIZE + EXTRA_FRAME_SIZE;
+                                           ^
+kernel/scheduler.c:965:25: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    cur_nvic = t->tb.sp + EXTRA_FRAME_SIZE;
+                        ^
+kernel/scheduler.c:966:28: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    tramp_extra = t->tb.sp - EXTRA_FRAME_SIZE;
+                           ^
+kernel/scheduler.c:967:27: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    tramp_nvic = t->tb.sp - (EXTRA_FRAME_SIZE + NVIC_FRAME_SIZE);
+                          ^
+kernel/scheduler.c:984:27: portability: 't->tb.osp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    t->tb.sp = (t->tb.osp - (EXTRA_FRAME_SIZE + NVIC_FRAME_SIZE));
+                          ^
+kernel/scheduler.c:986:14: portability: 't->tb.sp' is of type 'void *'. When using void pointers in calculations, the behaviour is undefined. [arithOperationsOnVoidPointer]
+    t->tb.sp -= EXTRA_FRAME_SIZE;
+             ^
+kernel/scheduler.c:835:9: style: Unused variable: i [unusedVariable]
+    int i;
+        ^
+kernel/stm32f4/stm32f407discovery.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+kernel/stm32f4/stm32f411nucleo.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 17 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+kernel/stm32f4/stm32f446nucleo.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 15 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+kernel/stm32f4/stm32f4xxpyboard.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 16 configurations. Use --force to check all configurations. [toomanyconfigs]
+
+^
+kernel/string.c:160:24: style:inconclusive: Function 'memcmp' argument 1 names different: declaration 's1' definition '_s1'. [funcArgNamesDifferent]
+int memcmp(const void *_s1, const void *_s2, size_t n)
+                       ^
+kernel/string.h:8:31: note: Function 'memcmp' argument 1 names different: declaration 's1' definition '_s1'.
+extern int memcmp(const void *s1, const void *s2, size_t n);
+                              ^
+kernel/string.c:160:24: note: Function 'memcmp' argument 1 names different: declaration 's1' definition '_s1'.
+int memcmp(const void *_s1, const void *_s2, size_t n)
+                       ^
+kernel/string.c:160:41: style:inconclusive: Function 'memcmp' argument 2 names different: declaration 's2' definition '_s2'. [funcArgNamesDifferent]
+int memcmp(const void *_s1, const void *_s2, size_t n)
+                                        ^
+kernel/string.h:8:47: note: Function 'memcmp' argument 2 names different: declaration 's2' definition '_s2'.
+extern int memcmp(const void *s1, const void *s2, size_t n);
+                                              ^
+kernel/string.c:160:41: note: Function 'memcmp' argument 2 names different: declaration 's2' definition '_s2'.
+int memcmp(const void *_s1, const void *_s2, size_t n)
+                                        ^
+kernel/systick.c:141:19: warning: Either the condition 't' is redundant or there is possible null pointer dereference: t. [nullPointerRedundantCheck]
+        next_t = (t->expire_time - jiffies);
+                  ^
+kernel/systick.c:132:17: note: Assuming that condition 't' is not redundant
+        while ((t) && (t->expire_time < jiffies)) {
+                ^
+kernel/systick.c:141:19: note: Null pointer dereference
+        next_t = (t->expire_time - jiffies);
+                  ^
+kernel/systick.c:69:1: style: Unused variable: ret [unusedVariable]
+DECLARE_HEAP(ktimer, expire_time);
+^
+kernel/systick.c:69:1: style: Unused variable: child [unusedVariable]
+DECLARE_HEAP(ktimer, expire_time);
+^
+kernel/systick.c:125:12: style: Variable 'next_t' is assigned a value that is never used. [unreadVariable]
+    next_t = -1;
+           ^
+kernel/systick.c:141:16: style: Variable 'next_t' is assigned a value that is never used. [unreadVariable]
+        next_t = (t->expire_time - jiffies);
+               ^
+kernel/systick.c:123:14: style: Unused variable: this_timeslice [unusedVariable]
+    uint32_t this_timeslice;
+             ^
+kernel/systick.c:151:14: style: Unused variable: this_timeslice [unusedVariable]
+    uint32_t this_timeslice;
+             ^
+kernel/vfs.c:528:17: warning: Identical inner 'if' condition is always true. [identicalInnerCondition]
+            if (f) {
+                ^
+kernel/vfs.c:527:13: note: outer condition: f
+        if (f && (flags & O_TRUNC)) {
+            ^
+kernel/vfs.c:528:17: note: identical inner condition: f
+            if (f) {
+                ^
+kernel/vfs.c:154:9: style: Condition 'parent' is always true [knownConditionTrueFalse]
+    if (parent) {
+        ^
+kernel/vfs.c:149:9: note: Assuming that condition '!parent' is not redundant
+    if (!parent)
+        ^
+kernel/vfs.c:151:34: note: Assuming condition is false
+    if ((parent->flags & FL_DIR) == 0)
+                                 ^
+kernel/vfs.c:154:9: note: Condition 'parent' is always true
+    if (parent) {
+        ^
+kernel/vfs.c:425:9: style: Condition 'fno' is always true [knownConditionTrueFalse]
+    if (fno && fno->owner && fno->owner->ops.unlink)
+        ^
+kernel/vfs.c:421:9: note: Assuming that condition '!fno' is not redundant
+    if (!fno)
+        ^
+kernel/vfs.c:425:9: note: Condition 'fno' is always true
+    if (fno && fno->owner && fno->owner->ops.unlink)
+        ^
+kernel/vfs.c:540:17: style: Condition 'f' is always true [knownConditionTrueFalse]
+            if (f && f->owner && f->owner->ops.open) {
+                ^
+kernel/vfs.c:538:13: note: Assuming that condition 'f' is not redundant
+        if (f) {
+            ^
+kernel/vfs.c:540:17: note: Condition 'f' is always true
+            if (f && f->owner && f->owner->ops.open) {
+                ^
+kernel/vfs.c:671:28: warning: Either the condition '!fno' is redundant or there is possible null pointer dereference: fno. [nullPointerRedundantCheck]
+    next = (struct fnode *)fno->dir_ptr;
+                           ^
+kernel/vfs.c:672:9: note: Assuming that condition '!fno' is not redundant
+    if (!fno || !ep)
+        ^
+kernel/vfs.c:671:28: note: Null pointer dereference
+    next = (struct fnode *)fno->dir_ptr;
+                           ^
+kernel/vfs.c:203:62: style: The scope of the variable 'path_basename' can be reduced. [variableScope]
+    char path[MAX_FILE], selfl[MAX_FILE], parentl[MAX_FILE], path_basename[MAX_FILE];
+                                                             ^
+kernel/vfs.c:281:10: style: The scope of the variable 'link' can be reduced. [variableScope]
+    char link[MAX_FILE];
+         ^
+kernel/vfs.c:315:38: style:inconclusive: Function 'fno_search' argument 1 names different: declaration 'path' definition '_path'. [funcArgNamesDifferent]
+struct fnode *fno_search(const char *_path)
+                                     ^
+kernel/frosted.h:259:38: note: Function 'fno_search' argument 1 names different: declaration 'path' definition '_path'.
+struct fnode *fno_search(const char *path);
+                                     ^
+kernel/vfs.c:315:38: note: Function 'fno_search' argument 1 names different: declaration 'path' definition '_path'.
+struct fnode *fno_search(const char *_path)
+                                     ^
+kernel/vfs.c:280:19: style: Unused variable: cur [unusedVariable]
+    struct fnode *cur;
+                  ^
+kernel/vfs.c:617:19: style: Unused variable: f [unusedVariable]
+    struct fnode *f;
+                  ^
+kernel/vfs.c:981:12: style: Variable 'fd' is assigned a value that is never used. [unreadVariable]
+    int fd = arg1;
+           ^
+kconfig/menu.c:610:2: warning: Null pointer dereference: sym [ctunullpointer]
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+kconfig/menu.c:624:6: note: Assuming that condition 'sym' is not redundant
+
+     ^
+kconfig/menu.c:640:24: note: Calling function get_symbol_prop, 1st argument is null
+ prop = get_symbol_prop(sym);
+                       ^
+kconfig/menu.c:610:2: note: Dereferencing argument sym that is null
+ for_all_properties(sym, prop, P_SYMBOL)
+ ^
+kernel/systick.c:69:1: warning: Null pointer dereference: el [ctunullpointer]
+DECLARE_HEAP(ktimer, expire_time);
+^
+kernel/systick.c:99:13: note: Assuming that condition 'tid<0' is not redundant
+
+            ^
+kernel/systick.c:103:22: note: Calling function heap_delete, 2nd argument is null
+    ret = heap_delete(ktimer_list, tid);
+                     ^
+kernel/systick.c:69:1: note: Dereferencing argument el that is null
+DECLARE_HEAP(ktimer, expire_time);
+^
+kernel/hardfault_debug.c:12:0: style: The function 'HardFault_Handler' is never used. [unusedFunction]
+
+^
+kernel/hardfault_debug.c:68:0: style: The function 'HardFault_HandlerC' is never used. [unusedFunction]
+
+^
+kernel/hardfault_debug.c:29:0: style: The function 'UsageFault_Handler' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:41:0: style: The function '_menu_init' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32f4_adc.c:122:0: style: The function 'adc_init' is never used. [unusedFunction]
+
+^
+kernel/frosted.c:168:0: style: The function 'bus_fault_handler' is never used. [unusedFunction]
+
+^
+kconfig/qconf.cc:1641:0: style: The function 'closeEvent' is never used. [unusedFunction]
+
+^
+kconfig/qconf.cc:827:0: style: The function 'contextMenuEvent' is never used. [unusedFunction]
+
+^
+kernel/fpb.c:55:0: style: The function 'debug_monitor_handler' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:925:0: style: The function 'del_handler' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:890:0: style: The function 'devgpio_init' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:901:0: style: The function 'devspi_init' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:896:0: style: The function 'devuart_init' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:197:0: style: The function 'dma1_stream2_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:202:0: style: The function 'dma1_stream4_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:176:0: style: The function 'dma1_stream5_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:181:0: style: The function 'dma1_stream6_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32f4_adc.c:60:0: style: The function 'dma2_stream0_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_spi.c:74:0: style: The function 'dma2_stream2_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_spi.c:82:0: style: The function 'dma2_stream3_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/lsm303dlhc.c:102:0: style: The function 'drdy_callback' is never used. [unusedFunction]
+
+^
+kernel/drivers/gpio.c:322:0: style: The function 'eint0_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/gpio.c:326:0: style: The function 'eint1_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/gpio.c:330:0: style: The function 'eint2_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/gpio.c:334:0: style: The function 'eint3_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/lm3s_eth.c:128:0: style: The function 'eth_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:56:0: style: The function 'exti0_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:95:0: style: The function 'exti15_10_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:61:0: style: The function 'exti1_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:66:0: style: The function 'exti2_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:71:0: style: The function 'exti3_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:76:0: style: The function 'exti4_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:81:0: style: The function 'exti9_5_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/exti.c:220:0: style: The function 'exti_unregister' is never used. [unusedFunction]
+
+^
+kconfig/util.c:14:0: style: The function 'file_lookup' is never used. [unusedFunction]
+
+^
+kernel/drivers/fortuna.c:270:0: style: The function 'fortuna_shutdown' is never used. [unusedFunction]
+
+^
+kernel/drivers/frand.c:96:0: style: The function 'frand_init' is never used. [unusedFunction]
+
+^
+kernel/systick.c:54:0: style: The function 'frosted_scheduler_off' is never used. [unusedFunction]
+
+^
+kernel/drivers/ft5336.c:91:0: style: The function 'ft5336_init' is never used. [unusedFunction]
+
+^
+kernel/drivers/gpio.c:201:0: style: The function 'gpio_list_del' is never used. [unusedFunction]
+
+^
+kernel/frosted.c:136:0: style: The function 'hard_fault_handler' is never used. [unusedFunction]
+
+^
+kernel/frosted.c:128:0: style: The function 'hardfault_handler_dbg' is never used. [unusedFunction]
+
+^
+kernel/systick.c:69:0: style: The function 'heap_destroy' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:172:0: style: The function 'i2c1_er_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:168:0: style: The function 'i2c1_ev_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:193:0: style: The function 'i2c3_er_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:189:0: style: The function 'i2c3_ev_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_i2c.c:481:0: style: The function 'i2c_fno_init' is never used. [unusedFunction]
+
+^
+kernel/kprintf.c:276:0: style: The function 'ksprintf' is never used. [unusedFunction]
+
+^
+kernel/drivers/l3gd20.c:219:0: style: The function 'l3gd20_init' is never used. [unusedFunction]
+
+^
+kernel/drivers/lsm303dlhc.c:154:0: style: The function 'lsm303dlhc_init' is never used. [unusedFunction]
+
+^
+kernel/drivers/mccog21.c:205:0: style: The function 'mccog21_init' is never used. [unusedFunction]
+
+^
+kernel/frosted.c:150:0: style: The function 'mem_manage_handler' is never used. [unusedFunction]
+
+^
+kernel/malloc.c:631:0: style: The function 'mem_trylock' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:107:0: style: The function 'menu_add_dep' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:47:0: style: The function 'menu_add_entry' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:189:0: style: The function 'menu_add_expr' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:69:0: style: The function 'menu_add_menu' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:199:0: style: The function 'menu_add_option' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:178:0: style: The function 'menu_add_prompt' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:183:0: style: The function 'menu_add_visibility' is never used. [unusedFunction]
+
+^
+kconfig/menu.c:76:0: style: The function 'menu_end_menu' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:694:0: style: The function 'on_about1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:731:0: style: The function 'on_back_clicked' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:788:0: style: The function 'on_collapse_clicked' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:794:0: style: The function 'on_expand_clicked' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:777:0: style: The function 'on_full_clicked' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:663:0: style: The function 'on_introduction1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:712:0: style: The function 'on_license1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:746:0: style: The function 'on_load_clicked' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:589:0: style: The function 'on_quit1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:569:0: style: The function 'on_save_as1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:637:0: style: The function 'on_set_option_mode1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:646:0: style: The function 'on_set_option_mode2_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:655:0: style: The function 'on_set_option_mode3_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:625:0: style: The function 'on_show_data1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:596:0: style: The function 'on_show_name1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:607:0: style: The function 'on_show_range1_activate' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:752:0: style: The function 'on_single_clicked' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:761:0: style: The function 'on_split_clicked' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:1022:0: style: The function 'on_treeview1_button_press_event' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:904:0: style: The function 'on_treeview2_button_press_event' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:1006:0: style: The function 'on_treeview2_cursor_changed' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:961:0: style: The function 'on_treeview2_key_press_event' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:485:0: style: The function 'on_window1_destroy' is never used. [unusedFunction]
+
+^
+kconfig/gconf.c:492:0: style: The function 'on_window1_size_request' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_usb.c:65:0: style: The function 'otg_fs_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_usb.c:71:0: style: The function 'otg_hs_isr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2140:0: style: The function 'pend_sv_handler' is never used. [unusedFunction]
+
+^
+kernel/net/pico_lock.c:11:0: style: The function 'pico_lock' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1120:0: style: The function 'psp_read' is never used. [unusedFunction]
+
+^
+kernel/drivers/pty.c:291:0: style: The function 'pts_open' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_rng.c:106:0: style: The function 'rng_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_lowpower.c:142:0: style: The function 'rtc_wkup_isr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1142:0: style: The function 'scheduler_can_sleep' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1127:0: style: The function 'scheduler_ntasks' is never used. [unusedFunction]
+
+^
+kernel/frosted.c:64:0: style: The function 'simple_hard_fault_handler' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_spi.c:70:0: style: The function 'spi_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/stmpe811.c:779:0: style: The function 'stmpe811_init' is never used. [unusedFunction]
+
+^
+kconfig/util.c:92:0: style: The function 'str_assign' is never used. [unusedFunction]
+
+^
+kernel/locks.c:209:0: style: The function 'suspend_on_sem_wait' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:3023:0: style: The function 'sv_call_handler' is never used. [unusedFunction]
+
+^
+kconfig/symbol.c:45:0: style: The function 'sym_init' is never used. [unusedFunction]
+
+^
+kernel/module.c:155:0: style: The function 'sys_accept_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2493:0: style: The function 'sys_alarm_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:124:0: style: The function 'sys_bind_hdlr' is never used. [unusedFunction]
+
+^
+kernel/malloc.c:673:0: style: The function 'sys_calloc_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:818:0: style: The function 'sys_chdir_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:99:0: style: The function 'sys_clock_gettime_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:114:0: style: The function 'sys_clock_settime_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:568:0: style: The function 'sys_close_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:683:0: style: The function 'sys_closedir_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:144:0: style: The function 'sys_connect_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:795:0: style: The function 'sys_dup2_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:781:0: style: The function 'sys_dup_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:475:0: style: The function 'sys_exec_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:92:0: style: The function 'sys_execb_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2927:0: style: The function 'sys_exit_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:979:0: style: The function 'sys_fcntl_hdlr' is never used. [unusedFunction]
+
+^
+kernel/malloc.c:657:0: style: The function 'sys_free_hdlr' is never used. [unusedFunction]
+
+^
+kernel/getaddrinfo.c:29:0: style: The function 'sys_freeaddrinfo_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:731:0: style: The function 'sys_fstat_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:801:0: style: The function 'sys_ftruncate_hdlr' is never used. [unusedFunction]
+
+^
+kernel/getaddrinfo.c:24:0: style: The function 'sys_getaddrinfo_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:854:0: style: The function 'sys_getcwd_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:244:0: style: The function 'sys_getpeername_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2431:0: style: The function 'sys_getpid_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2439:0: style: The function 'sys_getppid_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2893:0: style: The function 'sys_getpriority_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:233:0: style: The function 'sys_getsockname_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:220:0: style: The function 'sys_getsockopt_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:591:0: style: The function 'sys_ioctl_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:834:0: style: The function 'sys_isatty_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:601:0: style: The function 'sys_link_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:135:0: style: The function 'sys_listen_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:755:0: style: The function 'sys_lstat_hdlr' is never used. [unusedFunction]
+
+^
+kernel/malloc.c:647:0: style: The function 'sys_malloc_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:613:0: style: The function 'sys_mkdir_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:957:0: style: The function 'sys_mount_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:343:0: style: The function 'sys_mutex_destroy_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:322:0: style: The function 'sys_mutex_init_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:327:0: style: The function 'sys_mutex_lock_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:335:0: style: The function 'sys_mutex_unlock_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:493:0: style: The function 'sys_open_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:642:0: style: The function 'sys_opendir_hdlr' is never used. [unusedFunction]
+
+^
+kernel/pipe.c:263:0: style: The function 'sys_pipe2_hdlr' is never used. [unusedFunction]
+
+^
+kernel/pipe.c:249:0: style: The function 'sys_pipe_init' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2547:0: style: The function 'sys_poll_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1972:0: style: The function 'sys_pthread_cancel_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1953:0: style: The function 'sys_pthread_create_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1968:0: style: The function 'sys_pthread_detach_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1958:0: style: The function 'sys_pthread_exit_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2016:0: style: The function 'sys_pthread_getspecific_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1964:0: style: The function 'sys_pthread_join_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2008:0: style: The function 'sys_pthread_key_create_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2004:0: style: The function 'sys_pthread_kill_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1988:0: style: The function 'sys_pthread_mutex_destroy_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1984:0: style: The function 'sys_pthread_mutex_init_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1992:0: style: The function 'sys_pthread_mutex_lock_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1996:0: style: The function 'sys_pthread_mutex_trylock_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2000:0: style: The function 'sys_pthread_mutex_unlock_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1976:0: style: The function 'sys_pthread_self_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1980:0: style: The function 'sys_pthread_setcancelstate_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2012:0: style: The function 'sys_pthread_setspecific_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2776:0: style: The function 'sys_ptrace_hdlr' is never used. [unusedFunction]
+
+^
+kernel/drivers/pty.c:401:0: style: The function 'sys_ptsname_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:84:0: style: The function 'sys_read_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:660:0: style: The function 'sys_readdir_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:451:0: style: The function 'sys_readlink_hdlr' is never used. [unusedFunction]
+
+^
+kernel/malloc.c:683:0: style: The function 'sys_realloc_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:128:0: style: The function 'sys_reboot_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:170:0: style: The function 'sys_recvfrom_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:119:0: style: The function 'sys_register_handler' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2540:0: style: The function 'sys_sched_yield_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:581:0: style: The function 'sys_seek_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:201:0: style: The function 'sys_sem_destroy_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:166:0: style: The function 'sys_sem_init_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:177:0: style: The function 'sys_sem_post_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:193:0: style: The function 'sys_sem_trywait_hdlr' is never used. [unusedFunction]
+
+^
+kernel/locks.c:185:0: style: The function 'sys_sem_wait_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:186:0: style: The function 'sys_sendto_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2875:0: style: The function 'sys_setpriority_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2934:0: style: The function 'sys_setsid_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:209:0: style: The function 'sys_setsockopt_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:200:0: style: The function 'sys_shutdown_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1012:0: style: The function 'sys_sigaction_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1052:0: style: The function 'sys_sigprocmask_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1081:0: style: The function 'sys_sigsuspend_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2456:0: style: The function 'sys_sleep_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:116:0: style: The function 'sys_socket_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:62:0: style: The function 'sys_standby_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:722:0: style: The function 'sys_stat_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:57:0: style: The function 'sys_suspend_hdlr' is never used. [unusedFunction]
+
+^
+kernel/term.c:32:0: style: The function 'sys_tcgetattr_hdlr' is never used. [unusedFunction]
+
+^
+kernel/term.c:59:0: style: The function 'sys_tcsendbreak_hdlr' is never used. [unusedFunction]
+
+^
+kernel/term.c:45:0: style: The function 'sys_tcsetattr_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:75:0: style: The function 'sys_test_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:80:0: style: The function 'sys_thread_create_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:86:0: style: The function 'sys_thread_join_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:807:0: style: The function 'sys_truncate_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:842:0: style: The function 'sys_ttyname_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2508:0: style: The function 'sys_ualarm_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:969:0: style: The function 'sys_umount_hdlr' is never used. [unusedFunction]
+
+^
+kernel/sys.c:160:0: style: The function 'sys_uname_hdlr' is never used. [unusedFunction]
+
+^
+kernel/vfs.c:626:0: style: The function 'sys_unlink_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:1374:0: style: The function 'sys_vfork_hdlr' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2604:0: style: The function 'sys_waitpid_hdlr' is never used. [unusedFunction]
+
+^
+kernel/module.c:99:0: style: The function 'sys_write_hdlr' is never used. [unusedFunction]
+
+^
+kernel/drivers/socket_in.c:1035:0: style: The function 'sysfs_no_op' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:689:0: style: The function 'task_fd_get_flags' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:657:0: style: The function 'task_fd_getmask' is never used. [unusedFunction]
+
+^
+kernel/scheduler.c:2322:0: style: The function 'task_wakeup' is never used. [unusedFunction]
+
+^
+kernel/drivers/stmpe811.c:658:0: style: The function 'ts_read_end' is never used. [unusedFunction]
+
+^
+kernel/drivers/stmpe811.c:603:0: style: The function 'ts_read_touch' is never used. [unusedFunction]
+
+^
+kernel/drivers/uart.c:216:0: style: The function 'uart0_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/uart.c:221:0: style: The function 'uart1_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/uart.c:226:0: style: The function 'uart2_isr' is never used. [unusedFunction]
+
+^
+kernel/module.c:38:0: style: The function 'unregister_module' is never used. [unusedFunction]
+
+^
+kernel/frosted.c:173:0: style: The function 'usage_fault_handler' is never used. [unusedFunction]
+
+^
+kernel/drivers/uart.c:232:0: style: The function 'usart0_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/uart.c:239:0: style: The function 'usart1_isr' is never used. [unusedFunction]
+
+^
+kernel/drivers/uart.c:245:0: style: The function 'usart2_isr' is never used. [unusedFunction]
+
+^
+kernel/lm3s/lm3s6965evb.c:103:0: style: The function 'usart_disable' is never used. [unusedFunction]
+
+^
+kernel/drivers/stm32_usb.c:221:0: style: The function 'usb_host_release_interface' is never used. [unusedFunction]
+
+^
+kernel/crypto/aes.c:1098:0: style: The function 'wc_AesCbcDecrypt' is never used. [unusedFunction]
+
+^
+kernel/drivers/xadow_LED_5x7.c:115:0: style: The function 'xadow_led_init' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingInclude]
+
